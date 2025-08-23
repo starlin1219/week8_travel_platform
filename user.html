@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/week8_travel_platform/assets/favicon-DBtkH5fe.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <title>個人資訊 | ZOBAA! 旅遊網站</title>
+      <script type="module" crossorigin src="/week8_travel_platform/assets/main-3O-Zn4fN.js"></script>
+      <link rel="stylesheet" crossorigin href="/week8_travel_platform/assets/main-DUE-z4Js.css">
+    </head>
+    <body>
+        <!-- 導覽列 -->
+        <!-- fixed-top -->
+<nav class="navbar py-6 py-md-8 fixed-top">
+    <div class="container position-relative">
+        <div class="d-flex align-items-center me-auto">
+            <!-- logo -->
+            <a class="navbar-brand me-12" href="index.html">
+                <img src="data:image/svg+xml,%3csvg%20width='144'%20height='24'%20viewBox='0%200%20144%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.9341%209.93199L19.0346%2014.1297H22.4963V17.5369H18.2986L17.3174%2022.1707H13.6921L14.6734%2017.5369H9.71247L8.73119%2022.1707H5.13317L6.11445%2017.5369H1.99854V14.1297H6.85041L7.74991%209.93199H3.66126V6.52478H8.48587L9.43989%202H13.0379L12.0839%206.52478H17.0448L17.9988%202H21.6241L20.6701%206.52478H24.1591V9.93199H19.9341ZM16.3088%209.93199H11.3479L10.4484%2014.1297H15.4093L16.3088%209.93199Z'%20fill='%234A3830'/%3e%3cpath%20d='M38.8237%2018.9543H47.3826V22.1707H34.408V19.2269L42.9124%206.36123H34.408V3.14482H47.3826V6.08866L38.8237%2018.9543Z'%20fill='%234A3830'/%3e%3cpath%20d='M60.0076%2022.3615C58.2268%2022.3615%2056.5913%2021.9436%2055.1012%2021.1077C53.6111%2020.2717%2052.43%2019.1178%2051.5577%2017.6459C50.6855%2016.1558%2050.2494%2014.4749%2050.2494%2012.6032C50.2494%2010.7497%2050.6855%209.087%2051.5577%207.61509C52.43%206.125%2053.6111%204.962%2055.1012%204.1261C56.5913%203.2902%2058.2268%202.87225%2060.0076%202.87225C61.8066%202.87225%2063.4421%203.2902%2064.914%204.1261C66.4041%204.962%2067.5762%206.125%2068.4303%207.61509C69.3025%209.087%2069.7386%2010.7497%2069.7386%2012.6032C69.7386%2014.4749%2069.3025%2016.1558%2068.4303%2017.6459C67.5762%2019.1178%2066.4041%2020.2717%2064.914%2021.1077C63.4239%2021.9436%2061.7885%2022.3615%2060.0076%2022.3615ZM60.0076%2018.9543C61.1525%2018.9543%2062.161%2018.6999%2063.0332%2018.1911C63.9055%2017.6641%2064.5869%2016.9191%2065.0776%2015.9559C65.5682%2014.9928%2065.8135%2013.8753%2065.8135%2012.6032C65.8135%2011.3312%2065.5682%2010.2227%2065.0776%209.27781C64.5869%208.3147%2063.9055%207.57874%2063.0332%207.06993C62.161%206.56112%2061.1525%206.30672%2060.0076%206.30672C58.8628%206.30672%2057.8452%206.56112%2056.9548%207.06993C56.0825%207.57874%2055.4011%208.3147%2054.9104%209.27781C54.4198%2010.2227%2054.1745%2011.3312%2054.1745%2012.6032C54.1745%2013.8753%2054.4198%2014.9928%2054.9104%2015.9559C55.4011%2016.9191%2056.0825%2017.6641%2056.9548%2018.1911C57.8452%2018.6999%2058.8628%2018.9543%2060.0076%2018.9543Z'%20fill='%234A3830'/%3e%3cpath%20d='M83.9169%2012.4124C84.989%2012.6123%2085.8704%2013.1484%2086.5609%2014.0206C87.2514%2014.8929%2087.5967%2015.8923%2087.5967%2017.019C87.5967%2018.0366%2087.3423%2018.9361%2086.8335%2019.7175C86.3428%2020.4807%2085.625%2021.0804%2084.6801%2021.5165C83.7352%2021.9526%2082.6176%2022.1707%2081.3274%2022.1707H73.1228V3.14482H80.9731C82.2633%203.14482%2083.3717%203.3538%2084.2985%203.77175C85.2434%204.1897%2085.9521%204.7712%2086.4246%205.51624C86.9152%206.26129%2087.1606%207.10628%2087.1606%208.05121C87.1606%209.15969%2086.8607%2010.0865%2086.261%2010.8315C85.6796%2011.5765%2084.8982%2012.1035%2083.9169%2012.4124ZM76.9389%2010.995H80.4279C81.3365%2010.995%2082.0361%2010.7952%2082.5267%2010.3954C83.0174%209.97742%2083.2627%209.38684%2083.2627%208.62362C83.2627%207.86041%2083.0174%207.26982%2082.5267%206.85187C82.0361%206.43392%2081.3365%206.22494%2080.4279%206.22494H76.9389V10.995ZM80.7822%2019.0633C81.709%2019.0633%2082.4268%2018.8453%2082.9356%2018.4091C83.4626%2017.973%2083.7261%2017.3552%2083.7261%2016.5556C83.7261%2015.7379%2083.4535%2015.1019%2082.9084%2014.6476C82.3632%2014.1751%2081.6272%2013.9389%2080.7005%2013.9389H76.9389V19.0633H80.7822Z'%20fill='%234A3830'/%3e%3cpath%20d='M102.85%2018.5454H95.2719L94.018%2022.1707H90.0111L96.8528%203.11756H101.296L108.138%2022.1707H104.103L102.85%2018.5454ZM101.814%2015.4926L99.0607%207.53331L96.3077%2015.4926H101.814Z'%20fill='%234A3830'/%3e%3cpath%20d='M122.906%2018.5454H115.329L114.075%2022.1707H110.068L116.91%203.11756H121.353L128.194%2022.1707H124.16L122.906%2018.5454ZM121.87%2015.4926L119.117%207.53331L116.364%2015.4926H121.87Z'%20fill='%234A3830'/%3e%3cpath%20d='M142.931%203.82191L139.102%2016.4259L135.995%2015.5934L138.955%202.75663L142.931%203.82191ZM135.977%2022.1918C135.31%2022.0131%20134.811%2021.6631%20134.48%2021.1418C134.172%2020.6076%20134.1%2020.0334%20134.265%2019.4191C134.429%2018.8047%20134.776%2018.3521%20135.306%2018.0613C135.858%2017.7576%20136.467%2017.6951%20137.134%2017.8739C137.783%2018.0479%20138.262%2018.402%20138.571%2018.9361C138.884%2019.4527%20138.958%2020.0181%20138.793%2020.6325C138.629%2021.2468%20138.279%2021.7082%20137.745%2022.0166C137.216%2022.3074%20136.626%2022.3658%20135.977%2022.1918Z'%20fill='%234A3830'/%3e%3c/svg%3e" alt="logo" />
+            </a>
+            <!-- 搜尋-pc -->
+            <form action="/" class="position-relative d-none d-lg-block">
+                <span
+                    class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y text-natural-60 ps-6"
+                >
+                    search
+                </span>
+                <input
+                    type="search"
+                    class="form-control py-5 ps-20 pe-6 rounded-1 search-pc"
+                    name="search"
+                    id="seardh-pc"
+                    placeholder="搜尋景點、地點或城市"
+                />
+            </form>
+        </div>
+        <!-- 搜尋-mobile -->
+        <div class="position-absolute start-0 end-0 z-1 px-6 bg-white">
+            <div class="collapse" id="collapseSearch">
+                <div class="d-flex align-items-center">
+                    <form action="/" class="position-relative w-100">
+                        <span
+                            class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y text-natural-60 ps-6"
+                        >
+                            search
+                        </span>
+                        <input
+                            type="search"
+                            class="form-control py-4 ps-20 pe-6 rounded-1"
+                            name="search"
+                            id="seardh"
+                            placeholder="搜尋景點、地點或城市"
+                        />
+                    </form>
+                    <button
+                        type="button"
+                        class="btn p-4 border-0"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSearch"
+                    >
+                        <span class="material-icons-outlined align-bottom">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button
+            type="button"
+            class="btn p-4 border-0 d-lg-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSearch"
+        >
+            <span class="material-icons-outlined align-bottom"> search </span>
+        </button>
+        <!-- 購物車連結 -->
+        <a href="cart.html" class="btn py-4 px-6 border-0 me-lg-8">
+            <span class="position-relative">
+                <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-alert text-white p-0 cart-tag"
+                >
+                    2
+                </span>
+                <span class="material-icons-outlined align-bottom">
+                    shopping_cart
+                </span>
+            </span>
+        </a>
+        <div>
+            <!-- 漢堡選單 -->
+            <div class="d-lg-none">
+                <button
+                    class="btn p-4 border-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="material-icons-outlined align-bottom">
+                        menu
+                    </span>
+                </button>
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                >
+                    <div class="offcanvas-header pt-12 px-12 ms-auto">
+                        <button
+                            type="button"
+                            class="btn p-0 border-0"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        >
+                            <span class="material-icons-outlined align-bottom">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <div
+                        class="offcanvas-body d-flex flex-column pt-0 px-12 pb-12"
+                    >
+                        <!-- offcanvas 使用者狀態 -->
+                        <div class="pb-8 border-bottom">
+                            <!-- 未登入 -->
+                            <!-- <div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <div
+                                        class="user-img bg-primary-40 rounded-circle p-2"
+                                    >
+                                        <img
+                                            src="/assets/images/ic_profile.svg"
+                                            alt="ic_profile"
+                                            class="align-bottom"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold text-primary">訪客</p>
+                                        <p>未登入</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- 已登入 -->
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="user-img">
+                                    <img
+                                        src="/week8_travel_platform/assets/avatar-1-cp2HwrEX.png"
+                                        alt="avatar-1"
+                                        class="align-bottom"
+                                    />
+                                </div>
+                                <div>
+                                    <p class="fw-bold text-primary">Jessica</p>
+                                    <p>jessica.yen@gamil.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- offcanvas 內容 -->
+                        <!-- 未登入 -->
+                        <!-- <div class="d-flex flex-column flex-grow-1">
+                            <div class="pt-12">
+                                <h2 class="fs-7 text-primary mb-2">
+                                    歡迎來到 ZOBAA
+                                </h2>
+                                <p>
+                                    加入會員即可立即訂購、收藏行程，並享相關優惠好禮。
+                                </p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary w-100"
+                                    >登入 / 註冊</a
+                                >
+                            </div>
+                        </div> -->
+                        <!-- 已登入 -->
+                        <div class="d-flex flex-column flex-grow-1 pt-8">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><img
+                                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17%204H7C5.89543%204%205%204.89543%205%206V19C5%2020.1046%205.89543%2021%207%2021H17C18.1046%2021%2019%2020.1046%2019%2019V6C19%204.89543%2018.1046%204%2017%204Z'%20stroke='%234B4B4B'%20stroke-width='2'/%3e%3cpath%20d='M9%209H15M9%2013H15M9%2017H13'%20stroke='%234B4B4B'%20stroke-width='2'%20stroke-linecap='round'/%3e%3c/svg%3e"
+                                            alt="ic_order"
+                                            class="align-bottom me-4"
+                                        />訂單管理</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><span
+                                            class="material-icons-outlined align-bottom me-4"
+                                        >
+                                            favorite_border </span
+                                        >我的收藏</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><img
+                                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.8999%2012.6599C19.7396%2012.4774%2019.6512%2012.2428%2019.6512%2011.9999C19.6512%2011.757%2019.7396%2011.5224%2019.8999%2011.3399L21.1799%209.89989C21.3209%209.74256%2021.4085%209.5446%2021.4301%209.3344C21.4516%209.12421%2021.4061%208.91258%2021.2999%208.72989L19.2999%205.2699C19.1948%205.08742%2019.0348%204.94277%2018.8426%204.85658C18.6505%204.77039%2018.4361%204.74705%2018.2299%204.7899L16.3499%205.1699C16.1107%205.21932%2015.8616%205.17948%2015.6498%205.0579C15.4379%204.93631%2015.2779%204.74138%2015.1999%204.5099L14.5899%202.6799C14.5228%202.48127%2014.395%202.30876%2014.2245%202.18674C14.0541%202.06471%2013.8495%201.99935%2013.6399%201.9999H9.6399C9.42183%201.98851%209.20603%202.04882%209.02546%202.17161C8.84489%202.2944%208.70948%202.47291%208.6399%202.6799L8.0799%204.5099C8.0019%204.74138%207.84187%204.93631%207.63001%205.0579C7.41815%205.17948%207.16911%205.21932%206.9299%205.1699L4.9999%204.7899C4.80445%204.76228%204.6052%204.79312%204.42724%204.87853C4.24929%204.96395%204.1006%205.10012%203.9999%205.2699L1.9999%208.72989C1.89106%208.91054%201.84212%209.12098%201.86008%209.33112C1.87804%209.54126%201.96198%209.74034%202.0999%209.89989L3.3699%2011.3399C3.53022%2011.5224%203.61863%2011.757%203.61863%2011.9999C3.61863%2012.2428%203.53022%2012.4774%203.3699%2012.6599L2.0999%2014.0999C1.96198%2014.2595%201.87804%2014.4585%201.86008%2014.6687C1.84212%2014.8788%201.89106%2015.0892%201.9999%2015.2699L3.9999%2018.7299C4.10499%2018.9124%204.26502%2019.057%204.45715%2019.1432C4.64928%2019.2294%204.86372%2019.2527%205.0699%2019.2099L6.9499%2018.8299C7.18911%2018.7805%207.43815%2018.8203%207.65001%2018.9419C7.86187%2019.0635%208.0219%2019.2584%208.0999%2019.4899L8.7099%2021.3199C8.77948%2021.5269%208.91489%2021.7054%209.09546%2021.8282C9.27603%2021.951%209.49183%2022.0113%209.7099%2021.9999H13.7099C13.9195%2022.0004%2014.1241%2021.9351%2014.2945%2021.8131C14.465%2021.691%2014.5928%2021.5185%2014.6599%2021.3199L15.2699%2019.4899C15.3479%2019.2584%2015.5079%2019.0635%2015.7198%2018.9419C15.9316%2018.8203%2016.1807%2018.7805%2016.4199%2018.8299L18.2999%2019.2099C18.5061%2019.2527%2018.7205%2019.2294%2018.9126%2019.1432C19.1048%2019.057%2019.2648%2018.9124%2019.3699%2018.7299L21.3699%2015.2699C21.4761%2015.0872%2021.5216%2014.8756%2021.5001%2014.6654C21.4785%2014.4552%2021.3909%2014.2572%2021.2499%2014.0999L19.8999%2012.6599ZM18.4099%2013.9999L19.2099%2014.8999L17.9299%2017.1199L16.7499%2016.8799C16.0297%2016.7327%2015.2805%2016.855%2014.6445%2017.2237C14.0085%2017.5924%2013.53%2018.1817%2013.2999%2018.8799L12.9199%2019.9999H10.3599L9.9999%2018.8599C9.76975%2018.1617%209.29128%2017.5724%208.6553%2017.2037C8.01932%2016.835%207.27012%2016.7127%206.5499%2016.8599L5.3699%2017.0999L4.0699%2014.8899L4.8699%2013.9899C5.36185%2013.4399%205.63383%2012.7278%205.63383%2011.9899C5.63383%2011.252%205.36185%2010.5399%204.8699%209.98989L4.0699%209.0899L5.3499%206.88989L6.5299%207.1299C7.25012%207.27712%207.99932%207.15478%208.6353%206.78609C9.27128%206.41741%209.74975%205.82805%209.9799%205.1299L10.3599%203.9999H12.9199L13.2999%205.13989C13.53%205.83805%2014.0085%206.42741%2014.6445%206.79609C15.2805%207.16478%2016.0297%207.28712%2016.7499%207.13989L17.9299%206.8999L19.2099%209.11989L18.4099%2010.0199C17.9235%2010.5687%2017.6549%2011.2766%2017.6549%2012.0099C17.6549%2012.7432%2017.9235%2013.4511%2018.4099%2013.9999ZM11.6399%207.9999C10.8488%207.9999%2010.0754%208.23449%209.41761%208.67402C8.75982%209.11354%208.24713%209.73826%207.94438%2010.4692C7.64163%2011.2001%207.56241%2012.0043%207.71675%2012.7803C7.8711%2013.5562%208.25206%2014.2689%208.81147%2014.8283C9.37088%2015.3877%2010.0836%2015.7687%2010.8595%2015.923C11.6355%2016.0774%2012.4397%2015.9982%2013.1706%2015.6954C13.9015%2015.3927%2014.5262%2014.88%2014.9658%2014.2222C15.4053%2013.5644%2015.6399%2012.791%2015.6399%2011.9999C15.6399%2010.939%2015.2185%209.92161%2014.4683%209.17147C13.7182%208.42132%2012.7008%207.9999%2011.6399%207.9999ZM11.6399%2013.9999C11.2443%2013.9999%2010.8577%2013.8826%2010.5288%2013.6628C10.1999%2013.4431%209.94351%2013.1307%209.79214%2012.7653C9.64076%2012.3998%209.60116%2011.9977%209.67833%2011.6097C9.7555%2011.2218%209.94598%2010.8654%2010.2257%2010.5857C10.5054%2010.306%2010.8618%2010.1155%2011.2497%2010.0383C11.6377%209.96115%2012.0398%2010.0008%2012.4053%2010.1521C12.7707%2010.3035%2013.0831%2010.5599%2013.3028%2010.8888C13.5226%2011.2177%2013.6399%2011.6043%2013.6399%2011.9999C13.6399%2012.5303%2013.4292%2013.039%2013.0541%2013.4141C12.679%2013.7892%2012.1703%2013.9999%2011.6399%2013.9999Z'%20fill='%234B4B4B'/%3e%3c/svg%3e"
+                                            alt="ic_setting"
+                                            class="align-bottom me-4"
+                                        />帳號設定</a
+                                    >
+                                </li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a
+                                    href="#"
+                                    class="btn py-6 px-0 border-0 w-100 text-start fw-normal"
+                                    ><img
+                                        src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M20.15%2013H8V11H20.15L18.6%209.45L20%208L24%2012L20%2016L18.6%2014.55L20.15%2013ZM15%209V5H5V19H15V15H17V19C17%2019.55%2016.8042%2020.0208%2016.4125%2020.4125C16.0208%2020.8042%2015.55%2021%2015%2021H5C4.45%2021%203.97917%2020.8042%203.5875%2020.4125C3.19583%2020.0208%203%2019.55%203%2019V5C3%204.45%203.19583%203.97917%203.5875%203.5875C3.97917%203.19583%204.45%203%205%203H15C15.55%203%2016.0208%203.19583%2016.4125%203.5875C16.8042%203.97917%2017%204.45%2017%205V9H15Z'%20fill='%23909090'/%3e%3c/svg%3e"
+                                        alt="ic_logout"
+                                        class="me-4 align-bottom"
+                                    />登出</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- navbar 使用者狀態 -->
+            <div class="d-none d-lg-block">
+                <!-- 未登入 -->
+                <!-- <a href="login.html" class="btn btn-primary">登入 / 註冊</a> -->
+                <!-- 已登入 -->
+                <div class="d-flex align-items-center gap-4">
+                    <a href="user.html" class="user-img">
+                        <img
+                            src="/week8_travel_platform/assets/avatar-1-cp2HwrEX.png"
+                            alt="user-img"
+                        />
+                    </a>
+                    <span class="text-primary fw-bold">Jessica</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <main
+            class="bg-user bg-natural-15 pt-52 pt-md-96 pt-lg-99 pb-20 pb-md-60"
+        >
+            <!-- hero 區塊 -->
+            <header class="mb-64 mb-md-84 mb-lg-96">
+                <div class="container position-relative">
+                    <!-- hero 圖片 -->
+                    <div class="rounded-4 overflow-hidden hero-img">
+                        <img src="/week8_travel_platform/assets/hero-Ky0O1_QM.png" alt="hero" />
+                    </div>
+                    <!-- 更新封面 -->
+                    <div class="cover-update d-none d-md-block">
+                        <label
+                            for="coverFile"
+                            class="form-label mb-0 text-white cursor-pointer"
+                            ><span class="material-icons align-bottom me-4">
+                                edit </span
+                            >更換封面</label
+                        >
+                        <input
+                            class="form-control d-none"
+                            type="file"
+                            id="coverFile"
+                        />
+                    </div>
+                    <!-- user頭像及資訊 -->
+                    <div class="avatar-info">
+                        <!-- user頭像 -->
+                        <div
+                            class="hero-user-img border border-primary border-2 rounded-circle mb-4 position-relative mx-auto"
+                        >
+                            <img
+                                src="/week8_travel_platform/assets/avatar-1-cp2HwrEX.png"
+                                alt="avatar-1"
+                            />
+                            <div
+                                class="bg-avatar bg-primary p-4 rounded-circle"
+                            >
+                                <label
+                                    for="avatarFile"
+                                    class="form-label text-white d-flex align-items-center justify-content-center cursor-pointer"
+                                    ><span class="material-icons align-bottom">
+                                        edit
+                                    </span></label
+                                >
+                                <input
+                                    class="form-control d-none"
+                                    type="file"
+                                    id="avatarFile"
+                                />
+                            </div>
+                        </div>
+                        <!-- user資訊 -->
+                        <div class="text-center">
+                            <h1 class="text-primary fs-7 fs-lg-6">
+                                Jessica Yen
+                            </h1>
+                            <p class="fs-9 fs-lg-8">jessica.yen@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 主要內容 -->
+            <section>
+                <div class="container">
+                    <!-- 個人資訊-頁籤 -->
+                    <div
+                        class="bg-white py-8 px-12 rounded-2 rounded-md-4 user-shadow mb-8 mb-md-12"
+                    >
+                        <ul class="nav user-tab gap-12 w-100">
+                            <li class="nav-item flex-grow-1">
+                                <button
+                                    type="button"
+                                    class="nav-link text-black fw-bold py-6 px-0 active"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-account"
+                                >
+                                    <span class="pb-6">我的帳號</span>
+                                </button>
+                            </li>
+                            <li class="nav-item flex-grow-1 ps-12 border-start">
+                                <button
+                                    type="button"
+                                    class="nav-link text-black fw-bold py-6 px-0"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-order"
+                                >
+                                    <span class="pb-6">訂單管理</span>
+                                </button>
+                            </li>
+                            <li class="nav-item flex-grow-1 ps-12 border-start">
+                                <button
+                                    type="button"
+                                    class="nav-link text-black fw-bold py-6 px-0"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-collect"
+                                >
+                                    <span class="pb-6">我的收藏</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 個人資訊內容-頁籤 -->
+                    <div
+                        class="bg-white pt-16 pt-md-32 pb-8 pb-md-16 px-8 px-md-16 rounded-2 rounded-md-4 user-shadow"
+                    >
+                        <div class="tab-content" id="user-tabContent">
+                            <!-- 我的帳號 -->
+                            <div
+                                class="tab-pane fade show active"
+                                id="nav-account"
+                                role="tabpanel"
+                                aria-labelledby="nav-account-tab"
+                                tabindex="0"
+                            >
+                                <h2 class="text-black fs-4 fs-md-2 mb-20">
+                                    我的帳號
+                                </h2>
+                                <!-- 我的帳號-頁籤 -->
+                                <ul
+                                    class="nav nav-underline border-bottom mb-12 gap-16"
+                                    id="myAccount"
+                                    role="tablist"
+                                >
+                                    <li class="nav-item" role="presentation">
+                                        <button
+                                            class="nav-link active"
+                                            id="personal-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#personal-tab-pane"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="personal-tab-pane"
+                                            aria-selected="true"
+                                        >
+                                            個人資訊
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button
+                                            class="nav-link"
+                                            id="travelers-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#travelers-tab-pane"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="travelers-tab-pane"
+                                            aria-selected="false"
+                                        >
+                                            常用旅客
+                                        </button>
+                                    </li>
+                                </ul>
+                                <!-- 我的帳號-頁籤內容 -->
+                                <div class="tab-content" id="myAccountContent">
+                                    <div
+                                        class="tab-pane fade show active"
+                                        id="personal-tab-pane"
+                                        role="tabpanel"
+                                        aria-labelledby="personal-tab"
+                                        tabindex="0"
+                                    >
+                                        <!-- 個人資訊 -->
+                                        <div class="mb-20">
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    姓名
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    Jessica Yen
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    電子信箱
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    jessica.yen@gmail.com
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    密碼
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    ************
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    聯絡電話
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    +886 912-345-678
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    地址
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    台北市士林區幸福路193號5樓之1
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    生日
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    1995-09-20
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-primary w-100 w-md-auto"
+                                            >
+                                                <span
+                                                    class="material-icons align-bottom me-2"
+                                                >
+                                                    edit </span
+                                                >編輯資訊
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="travelers-tab-pane"
+                                        role="tabpanel"
+                                        aria-labelledby="travelers-tab"
+                                        tabindex="0"
+                                    >
+                                        <!-- 常用旅客 -->
+                                        <div class="mb-20">
+                                            <!-- 常用旅客卡片1 -->
+                                            <div
+                                                class="p-8 p-md-12 border rounded-3 mb-6 d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center traveler-card"
+                                            >
+                                                <!-- 常用旅客資訊 -->
+                                                <div
+                                                    class="d-flex align-items-center gap-4"
+                                                >
+                                                    <div
+                                                        class="traveler-img overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="/week8_travel_platform/assets/avatar-1-cp2HwrEX.png"
+                                                            alt="avatar-1"
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <h3
+                                                            class="text-dark-success fs-7 mb-4"
+                                                        >
+                                                            Jessica Yen
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <!-- 編輯刪除按鈕 -->
+                                                <div class="d-flex gap-4">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons align-bottom me-2"
+                                                        >
+                                                            edit </span
+                                                        >編輯資訊
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined align-bottom me-2"
+                                                        >
+                                                            close </span
+                                                        >刪除
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- 常用旅客卡片2 -->
+                                            <div
+                                                class="p-8 p-md-12 border rounded-3 d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center traveler-card"
+                                            >
+                                                <!-- 常用旅客資訊 -->
+                                                <div
+                                                    class="d-flex align-items-center gap-4"
+                                                >
+                                                    <div
+                                                        class="traveler-img overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="/week8_travel_platform/assets/avatar-2-Bso7ct1Q.jpg"
+                                                            alt="avatar-2"
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <h3
+                                                            class="text-dark-success fs-7 mb-4"
+                                                        >
+                                                            Jenny Lin
+                                                        </h3>
+                                                        <div
+                                                            class="text-primary d-flex gap-4 mb-2 d-none d-md-block"
+                                                        >
+                                                            <img
+                                                                src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%208.66667C2%207.95942%202.28095%207.28115%202.78105%206.78105C3.28115%206.28095%203.95942%206%204.66667%206H11.3333C12.0406%206%2012.7189%206.28095%2013.219%206.78105C13.719%207.28115%2014%207.95942%2014%208.66667V13.3333C14%2013.687%2013.8595%2014.0261%2013.6095%2014.2761C13.3594%2014.5262%2013.0203%2014.6667%2012.6667%2014.6667H3.33333C2.97971%2014.6667%202.64057%2014.5262%202.39052%2014.2761C2.14048%2014.0261%202%2013.687%202%2013.3333V8.66667Z'%20stroke='%234A3830'%20stroke-width='1.33333'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M2%208.66675L3.94267%2010.2207C4.734%2010.8541%205.876%2010.7907%206.59267%2010.0741C6.77746%209.88924%206.99686%209.7426%207.23834%209.64256C7.47981%209.54252%207.73862%209.49103%208%209.49103C8.26138%209.49103%208.52019%209.54252%208.76166%209.64256C9.00314%209.7426%209.22254%209.88924%209.40733%2010.0741C9.75362%2010.4203%2010.2154%2010.6266%2010.7043%2010.6537C11.1932%2010.6808%2011.675%2010.5266%2012.0573%2010.2207L14%208.66675'%20stroke='%234A3830'%20stroke-width='1.33333'%20stroke-linecap='round'/%3e%3cpath%20d='M8.0013%204.00008C7.64768%204.00008%207.30854%203.85961%207.05849%203.60956C6.80844%203.35951%206.66797%203.02037%206.66797%202.66675C6.66797%202.08275%207.1193%201.61608%207.51664%201.18875L8.0013%200.666748L8.48597%201.18875C8.8833%201.61608%209.33464%202.08275%209.33464%202.66675C9.33464%203.02037%209.19416%203.35951%208.94411%203.60956C8.69406%203.85961%208.35492%204.00008%208.0013%204.00008Z'%20stroke='%234A3830'%20stroke-width='1.33333'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                alt="ic_cake"
+                                                            /><span
+                                                                >Jenny.Linnn@gmail.com</span
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="text-primary d-flex gap-4 d-none d-md-block"
+                                                        >
+                                                            <img
+                                                                src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.66667%203.33325H13.3333C13.7%203.33325%2014%203.63325%2014%203.99992V11.9999C14%2012.3666%2013.7%2012.6666%2013.3333%2012.6666H2.66667C2.3%2012.6666%202%2012.3666%202%2011.9999V3.99992C2%203.63325%202.3%203.33325%202.66667%203.33325Z'%20stroke='%234A3830'%20stroke-width='1.33333'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M2%204.33325L8%207.99992L14%204.33325'%20stroke='%234A3830'%20stroke-width='1.33333'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                                                alt="ic_email"
+                                                            /><time
+                                                                datetime="2001-01-30"
+                                                                >2001.01.30</time
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 編輯刪除按鈕 -->
+                                                <div class="d-flex gap-4">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons align-bottom me-2"
+                                                        >
+                                                            edit </span
+                                                        >編輯資訊
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined align-bottom me-2"
+                                                        >
+                                                            close </span
+                                                        >刪除
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-primary w-100 w-md-auto"
+                                            >
+                                                <span
+                                                    class="material-icons-outlined align-bottom me-2"
+                                                >
+                                                    add </span
+                                                >新增常用旅客
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 訂單管理 -->
+                            <div
+                                class="tab-pane fade"
+                                id="nav-order"
+                                role="tabpanel"
+                                aria-labelledby="nav-order-tab"
+                                tabindex="0"
+                            >
+                                <h2 class="text-black fs-4 fs-md-2 mb-20">
+                                    訂單管理
+                                </h2>
+                                <p>目前沒有任何資料</p>
+                            </div>
+                            <!-- 我的收藏 -->
+                            <div
+                                class="tab-pane fade"
+                                id="nav-collect"
+                                role="tabpanel"
+                                aria-labelledby="nav-collect-tab"
+                                tabindex="0"
+                            >
+                                <h2 class="text-black fs-4 fs-md-2 mb-20">
+                                    我的收藏
+                                </h2>
+                                <p>目前沒有任何資料</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 頁尾 -->
+        <footer class="bg-black py-40 py-lg-50">
+    <div class="container">
+        <div
+            class="d-flex justify-content-between flex-column flex-lg-row gap-20"
+        >
+            <div>
+                <a href="index.html" class="mb-20 mb-lg-16">
+                    <img src="data:image/svg+xml,%3csvg%20width='142'%20height='21'%20viewBox='0%200%20142%2021'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.9341%207.93199L17.0346%2012.1297H20.4963V15.5369H16.2986L15.3174%2020.1707H11.6921L12.6734%2015.5369H7.71247L6.73119%2020.1707H3.13317L4.11445%2015.5369H-0.00146484V12.1297H4.85041L5.74991%207.93199H1.66126V4.52478H6.48587L7.43989%200H11.0379L10.0839%204.52478H15.0448L15.9988%200H19.6241L18.6701%204.52478H22.1591V7.93199H17.9341ZM14.3088%207.93199H9.34793L8.44843%2012.1297H13.4093L14.3088%207.93199Z'%20fill='white'/%3e%3cpath%20d='M36.8237%2016.9543H45.3826V20.1707H32.408V17.2269L40.9124%204.36123H32.408V1.14482H45.3826V4.08866L36.8237%2016.9543Z'%20fill='white'/%3e%3cpath%20d='M58.0076%2020.3615C56.2268%2020.3615%2054.5913%2019.9436%2053.1012%2019.1077C51.6111%2018.2717%2050.43%2017.1178%2049.5577%2015.6459C48.6855%2014.1558%2048.2494%2012.4749%2048.2494%2010.6032C48.2494%208.74972%2048.6855%207.087%2049.5577%205.61509C50.43%204.125%2051.6111%202.962%2053.1012%202.1261C54.5913%201.2902%2056.2268%200.872247%2058.0076%200.872247C59.8066%200.872247%2061.4421%201.2902%2062.914%202.1261C64.4041%202.962%2065.5762%204.125%2066.4303%205.61509C67.3025%207.087%2067.7386%208.74972%2067.7386%2010.6032C67.7386%2012.4749%2067.3025%2014.1558%2066.4303%2015.6459C65.5762%2017.1178%2064.4041%2018.2717%2062.914%2019.1077C61.4239%2019.9436%2059.7885%2020.3615%2058.0076%2020.3615ZM58.0076%2016.9543C59.1525%2016.9543%2060.161%2016.6999%2061.0332%2016.1911C61.9055%2015.6641%2062.5869%2014.9191%2063.0776%2013.9559C63.5682%2012.9928%2063.8135%2011.8753%2063.8135%2010.6032C63.8135%209.33122%2063.5682%208.22274%2063.0776%207.27781C62.5869%206.3147%2061.9055%205.57874%2061.0332%205.06993C60.161%204.56112%2059.1525%204.30672%2058.0076%204.30672C56.8628%204.30672%2055.8452%204.56112%2054.9548%205.06993C54.0825%205.57874%2053.4011%206.3147%2052.9104%207.27781C52.4198%208.22274%2052.1745%209.33122%2052.1745%2010.6032C52.1745%2011.8753%2052.4198%2012.9928%2052.9104%2013.9559C53.4011%2014.9191%2054.0825%2015.6641%2054.9548%2016.1911C55.8452%2016.6999%2056.8628%2016.9543%2058.0076%2016.9543Z'%20fill='white'/%3e%3cpath%20d='M81.9169%2010.4124C82.989%2010.6123%2083.8704%2011.1484%2084.5609%2012.0206C85.2514%2012.8929%2085.5967%2013.8923%2085.5967%2015.019C85.5967%2016.0366%2085.3423%2016.9361%2084.8335%2017.7175C84.3428%2018.4807%2083.625%2019.0804%2082.6801%2019.5165C81.7352%2019.9526%2080.6176%2020.1707%2079.3274%2020.1707H71.1228V1.14482H78.9731C80.2633%201.14482%2081.3717%201.3538%2082.2985%201.77175C83.2434%202.1897%2083.9521%202.7712%2084.4246%203.51624C84.9152%204.26129%2085.1606%205.10628%2085.1606%206.05121C85.1606%207.15969%2084.8607%208.08645%2084.261%208.8315C83.6796%209.57654%2082.8982%2010.1035%2081.9169%2010.4124ZM74.9389%208.99504H78.4279C79.3365%208.99504%2080.0361%208.79515%2080.5267%208.39537C81.0174%207.97742%2081.2627%207.38684%2081.2627%206.62362C81.2627%205.86041%2081.0174%205.26982%2080.5267%204.85187C80.0361%204.43392%2079.3365%204.22494%2078.4279%204.22494H74.9389V8.99504ZM78.7822%2017.0633C79.709%2017.0633%2080.4268%2016.8453%2080.9356%2016.4091C81.4626%2015.973%2081.7261%2015.3552%2081.7261%2014.5556C81.7261%2013.7379%2081.4535%2013.1019%2080.9084%2012.6476C80.3632%2012.1751%2079.6272%2011.9389%2078.7005%2011.9389H74.9389V17.0633H78.7822Z'%20fill='white'/%3e%3cpath%20d='M100.85%2016.5454H93.2719L92.018%2020.1707H88.0111L94.8528%201.11756H99.2958L106.138%2020.1707H102.103L100.85%2016.5454ZM99.8137%2013.4926L97.0607%205.53331L94.3077%2013.4926H99.8137Z'%20fill='white'/%3e%3cpath%20d='M120.906%2016.5454H113.329L112.075%2020.1707H108.068L114.91%201.11756H119.353L126.194%2020.1707H122.16L120.906%2016.5454ZM119.87%2013.4926L117.117%205.53331L114.364%2013.4926H119.87Z'%20fill='white'/%3e%3cpath%20d='M140.931%201.82191L137.102%2014.4259L133.995%2013.5934L136.955%200.756634L140.931%201.82191ZM133.977%2020.1918C133.31%2020.0131%20132.811%2019.6631%20132.48%2019.1418C132.172%2018.6076%20132.1%2018.0334%20132.265%2017.4191C132.429%2016.8047%20132.776%2016.3521%20133.306%2016.0613C133.858%2015.7576%20134.467%2015.6951%20135.134%2015.8739C135.783%2016.0479%20136.262%2016.402%20136.571%2016.9361C136.884%2017.4527%20136.958%2018.0181%20136.793%2018.6325C136.629%2019.2468%20136.279%2019.7082%20135.745%2020.0166C135.216%2020.3074%20134.626%2020.3658%20133.977%2020.1918Z'%20fill='white'/%3e%3c/svg%3e" alt="logo" />
+                </a>
+                <ul
+                    class="list-unstyled d-flex flex-column flex-lg-row gap-8 gap-lg-16 mb-0"
+                >
+                    <li>
+                        <a class="text-white" href="#">常見問題</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#">關於我們</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#">隱私權政策</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#">使用者條款</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul
+                    class="list-unstyled d-flex justify-content-lg-end gap-8 mb-8"
+                >
+                    <li>
+                        <a href="#"
+                            ><img src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_42659)'%3e%3cpath%20opacity='0.7'%20d='M20%200.5C30.7696%200.5%2039.5%209.23045%2039.5%2020C39.5%2030.7696%2030.7696%2039.5%2020%2039.5C9.23045%2039.5%200.5%2030.7696%200.5%2020C0.5%209.23045%209.23045%200.5%2020%200.5Z'%20stroke='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M29%2019.0263C29%2015.152%2024.9625%2012%2020%2012C15.0377%2012%2011%2015.152%2011%2019.0263C11%2022.4994%2014.2019%2025.4086%2018.527%2025.9589C18.8199%2026.0196%2019.2188%2026.1451%2019.3198%2026.386C19.4106%2026.6047%2019.3793%2026.9474%2019.3488%2027.1685C19.3488%2027.1685%2019.2436%2027.7796%2019.2204%2027.91C19.1814%2028.1288%2019.0395%2028.7659%2020%2028.3767C20.9608%2027.9874%2025.1828%2025.4404%2027.071%2023.3494C28.3754%2021.9736%2029%2020.577%2029%2019.0263ZM14.4146%2021.1339C14.1861%2021.1339%2014%2020.9408%2014%2020.703V17.4397C14%2017.2022%2014.2116%2017.0089%2014.48%2017.0089C14.7484%2017.0089%2014.9%2017.2006%2014.9%2017.4397V20.2724H15.9854C16.2143%2020.2724%2016.4%2020.4657%2016.4%2020.703C16.4%2020.9408%2016.2143%2021.1339%2015.9854%2021.1339H14.4146ZM18.2%2020.703C18.2%2020.9408%2017.9981%2021.1339%2017.7501%2021.1339C17.5019%2021.1339%2017.3%2020.9408%2017.3%2020.703V17.4397C17.3%2017.2022%2017.5019%2017.0089%2017.7501%2017.0089C17.9981%2017.0089%2018.2%2017.2022%2018.2%2017.4397V20.703ZM22.7%2020.703C22.7%2020.889%2022.5717%2021.0532%2022.3797%2021.1116C22.3316%2021.1265%2022.2813%2021.1339%2022.2309%2021.1339C22.0849%2021.1339%2021.9449%2021.0696%2021.8566%2020.9616L20.0372%2018.6842V20.703C20.0372%2020.9408%2019.8272%2021.1339%2019.5687%2021.1339C19.3103%2021.1339%2019.1%2020.9408%2019.1%2020.703V17.4397C19.1%2017.2541%2019.2288%2017.0899%2019.4203%2017.0312C19.4686%2017.0162%2019.5187%2017.0089%2019.5691%2017.0089C19.7153%2017.0089%2019.8554%2017.0731%2019.9431%2017.1812L21.7631%2019.4587V17.4397C21.7631%2017.2022%2021.9735%2017.0089%2022.2316%2017.0089C22.4902%2017.0089%2022.7%2017.2022%2022.7%2017.4397V20.703ZM25.5853%2018.6407C25.8142%2018.6407%2026%2018.8339%2026%2019.0715C26%2019.3088%2025.8142%2019.502%2025.5853%2019.502H24.4294V20.2724H25.5853C25.8138%2020.2724%2026%2020.4657%2026%2020.703C26%2020.9408%2025.8138%2021.1339%2025.5853%2021.1339H24.0145C23.7863%2021.1339%2023.6%2020.9408%2023.6%2020.703V19.0726V19.0715V17.4397C23.6%2017.2022%2023.7859%2017.0089%2024.0145%2017.0089H25.5853C25.8142%2017.0089%2026%2017.2022%2026%2017.4397C26%2017.6772%2025.8142%2017.8702%2025.5853%2017.8702H24.4294V18.6407H25.5853Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_42659'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Line"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><img src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_42662)'%3e%3cpath%20opacity='0.7'%20d='M20%200.5C30.7696%200.5%2039.5%209.23045%2039.5%2020C39.5%2030.7696%2030.7696%2039.5%2020%2039.5C9.23045%2039.5%200.5%2030.7696%200.5%2020C0.5%209.23045%209.23045%200.5%2020%200.5Z'%20stroke='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20%2011.9946C20.855%2011.9946%2021.732%2012.0166%2022.582%2012.0526L23.586%2012.1006L24.547%2012.1576L25.447%2012.2186L26.269%2012.2826C27.161%2012.3509%2028.0004%2012.7316%2028.6395%2013.3577C29.2786%2013.9838%2029.6764%2014.8152%2029.763%2015.7056L29.803%2016.1306L29.878%2017.0406C29.948%2017.9836%2030%2019.0116%2030%2019.9946C30%2020.9776%2029.948%2022.0056%2029.878%2022.9486L29.803%2023.8586C29.79%2024.0046%2029.777%2024.1456%2029.763%2024.2836C29.6764%2025.1742%2029.2784%2026.0058%2028.6391%2026.6319C27.9999%2027.258%2027.1602%2027.6386%2026.268%2027.7066L25.448%2027.7696L24.548%2027.8316L23.586%2027.8886L22.582%2027.9366C21.732%2027.9726%2020.855%2027.9946%2020%2027.9946C19.145%2027.9946%2018.268%2027.9726%2017.418%2027.9366L16.414%2027.8886L15.453%2027.8316L14.553%2027.7696L13.731%2027.7066C12.839%2027.6384%2011.9996%2027.2577%2011.3605%2026.6316C10.7214%2026.0055%2010.3236%2025.1741%2010.237%2024.2836L10.197%2023.8586L10.122%2022.9486C10.0455%2021.9658%2010.0048%2020.9804%2010%2019.9946C10%2019.0116%2010.052%2017.9836%2010.122%2017.0406L10.197%2016.1306C10.21%2015.9846%2010.223%2015.8436%2010.237%2015.7056C10.3235%2014.8153%2010.7212%2013.984%2011.3601%2013.358C11.999%2012.7319%2012.8381%2012.3511%2013.73%2012.2826L14.551%2012.2186L15.451%2012.1576L16.413%2012.1006L17.417%2012.0526C18.268%2012.0166%2019.145%2011.9946%2020%2011.9946ZM18%2017.5696V22.4196C18%2022.8816%2018.5%2023.1696%2018.9%2022.9396L23.1%2020.5146C23.1914%2020.462%2023.2673%2020.3863%2023.3201%2020.295C23.3729%2020.2037%2023.4007%2020.1001%2023.4007%2019.9946C23.4007%2019.8892%2023.3729%2019.7856%2023.3201%2019.6943C23.2673%2019.603%2023.1914%2019.5272%2023.1%2019.4746L18.9%2017.0506C18.8088%2016.998%2018.7053%2016.9702%2018.5999%2016.9702C18.4945%2016.9703%2018.3911%2016.998%2018.2998%2017.0507C18.2086%2017.1034%2018.1329%2017.1792%2018.0802%2017.2705C18.0276%2017.3618%2017.9999%2017.4653%2018%2017.5706V17.5696Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_42662'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="YouTube"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_42665)'%3e%3cpath%20opacity='0.7'%20d='M20%200.5C30.7696%200.5%2039.5%209.23045%2039.5%2020C39.5%2030.7696%2030.7696%2039.5%2020%2039.5C9.23045%2039.5%200.5%2030.7696%200.5%2020C0.5%209.23045%209.23045%200.5%2020%200.5Z'%20stroke='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M21.5983%2020.9736H24.1413L24.5219%2018.0404H21.5983V16.1677C21.5983%2015.3184%2021.8357%2014.7397%2023.0615%2014.7397L24.625%2014.739V12.1156C24.3545%2012.0799%2023.4265%2012%2022.3467%2012C20.0926%2012%2018.5494%2013.3669%2018.5494%2015.8773V18.0404H16V20.9736H18.5494V28.5H21.5983V20.9736Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_42665'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                                alt="Facebook"
+                        /></a>
+                    </li>
+                </ul>
+                <p class="fs-9 text-natural-50">
+                    copyright © 2025 ZOBAA 旅遊網站 All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.js"></script>
+    </body>
+</html>

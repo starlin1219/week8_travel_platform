@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/week8_travel_platform/assets/favicon-DBtkH5fe.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <title>購物車 | ZOBAA! 旅遊網站</title>
+      <script type="module" crossorigin src="/week8_travel_platform/assets/main-3O-Zn4fN.js"></script>
+      <link rel="stylesheet" crossorigin href="/week8_travel_platform/assets/main-DUE-z4Js.css">
+    </head>
+    <body>
+        <!-- 導覽列 -->
+        <!-- fixed-top -->
+<nav class="navbar py-6 py-md-8 fixed-top">
+    <div class="container position-relative">
+        <div class="d-flex align-items-center me-auto">
+            <!-- logo -->
+            <a class="navbar-brand me-12" href="index.html">
+                <img src="data:image/svg+xml,%3csvg%20width='144'%20height='24'%20viewBox='0%200%20144%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.9341%209.93199L19.0346%2014.1297H22.4963V17.5369H18.2986L17.3174%2022.1707H13.6921L14.6734%2017.5369H9.71247L8.73119%2022.1707H5.13317L6.11445%2017.5369H1.99854V14.1297H6.85041L7.74991%209.93199H3.66126V6.52478H8.48587L9.43989%202H13.0379L12.0839%206.52478H17.0448L17.9988%202H21.6241L20.6701%206.52478H24.1591V9.93199H19.9341ZM16.3088%209.93199H11.3479L10.4484%2014.1297H15.4093L16.3088%209.93199Z'%20fill='%234A3830'/%3e%3cpath%20d='M38.8237%2018.9543H47.3826V22.1707H34.408V19.2269L42.9124%206.36123H34.408V3.14482H47.3826V6.08866L38.8237%2018.9543Z'%20fill='%234A3830'/%3e%3cpath%20d='M60.0076%2022.3615C58.2268%2022.3615%2056.5913%2021.9436%2055.1012%2021.1077C53.6111%2020.2717%2052.43%2019.1178%2051.5577%2017.6459C50.6855%2016.1558%2050.2494%2014.4749%2050.2494%2012.6032C50.2494%2010.7497%2050.6855%209.087%2051.5577%207.61509C52.43%206.125%2053.6111%204.962%2055.1012%204.1261C56.5913%203.2902%2058.2268%202.87225%2060.0076%202.87225C61.8066%202.87225%2063.4421%203.2902%2064.914%204.1261C66.4041%204.962%2067.5762%206.125%2068.4303%207.61509C69.3025%209.087%2069.7386%2010.7497%2069.7386%2012.6032C69.7386%2014.4749%2069.3025%2016.1558%2068.4303%2017.6459C67.5762%2019.1178%2066.4041%2020.2717%2064.914%2021.1077C63.4239%2021.9436%2061.7885%2022.3615%2060.0076%2022.3615ZM60.0076%2018.9543C61.1525%2018.9543%2062.161%2018.6999%2063.0332%2018.1911C63.9055%2017.6641%2064.5869%2016.9191%2065.0776%2015.9559C65.5682%2014.9928%2065.8135%2013.8753%2065.8135%2012.6032C65.8135%2011.3312%2065.5682%2010.2227%2065.0776%209.27781C64.5869%208.3147%2063.9055%207.57874%2063.0332%207.06993C62.161%206.56112%2061.1525%206.30672%2060.0076%206.30672C58.8628%206.30672%2057.8452%206.56112%2056.9548%207.06993C56.0825%207.57874%2055.4011%208.3147%2054.9104%209.27781C54.4198%2010.2227%2054.1745%2011.3312%2054.1745%2012.6032C54.1745%2013.8753%2054.4198%2014.9928%2054.9104%2015.9559C55.4011%2016.9191%2056.0825%2017.6641%2056.9548%2018.1911C57.8452%2018.6999%2058.8628%2018.9543%2060.0076%2018.9543Z'%20fill='%234A3830'/%3e%3cpath%20d='M83.9169%2012.4124C84.989%2012.6123%2085.8704%2013.1484%2086.5609%2014.0206C87.2514%2014.8929%2087.5967%2015.8923%2087.5967%2017.019C87.5967%2018.0366%2087.3423%2018.9361%2086.8335%2019.7175C86.3428%2020.4807%2085.625%2021.0804%2084.6801%2021.5165C83.7352%2021.9526%2082.6176%2022.1707%2081.3274%2022.1707H73.1228V3.14482H80.9731C82.2633%203.14482%2083.3717%203.3538%2084.2985%203.77175C85.2434%204.1897%2085.9521%204.7712%2086.4246%205.51624C86.9152%206.26129%2087.1606%207.10628%2087.1606%208.05121C87.1606%209.15969%2086.8607%2010.0865%2086.261%2010.8315C85.6796%2011.5765%2084.8982%2012.1035%2083.9169%2012.4124ZM76.9389%2010.995H80.4279C81.3365%2010.995%2082.0361%2010.7952%2082.5267%2010.3954C83.0174%209.97742%2083.2627%209.38684%2083.2627%208.62362C83.2627%207.86041%2083.0174%207.26982%2082.5267%206.85187C82.0361%206.43392%2081.3365%206.22494%2080.4279%206.22494H76.9389V10.995ZM80.7822%2019.0633C81.709%2019.0633%2082.4268%2018.8453%2082.9356%2018.4091C83.4626%2017.973%2083.7261%2017.3552%2083.7261%2016.5556C83.7261%2015.7379%2083.4535%2015.1019%2082.9084%2014.6476C82.3632%2014.1751%2081.6272%2013.9389%2080.7005%2013.9389H76.9389V19.0633H80.7822Z'%20fill='%234A3830'/%3e%3cpath%20d='M102.85%2018.5454H95.2719L94.018%2022.1707H90.0111L96.8528%203.11756H101.296L108.138%2022.1707H104.103L102.85%2018.5454ZM101.814%2015.4926L99.0607%207.53331L96.3077%2015.4926H101.814Z'%20fill='%234A3830'/%3e%3cpath%20d='M122.906%2018.5454H115.329L114.075%2022.1707H110.068L116.91%203.11756H121.353L128.194%2022.1707H124.16L122.906%2018.5454ZM121.87%2015.4926L119.117%207.53331L116.364%2015.4926H121.87Z'%20fill='%234A3830'/%3e%3cpath%20d='M142.931%203.82191L139.102%2016.4259L135.995%2015.5934L138.955%202.75663L142.931%203.82191ZM135.977%2022.1918C135.31%2022.0131%20134.811%2021.6631%20134.48%2021.1418C134.172%2020.6076%20134.1%2020.0334%20134.265%2019.4191C134.429%2018.8047%20134.776%2018.3521%20135.306%2018.0613C135.858%2017.7576%20136.467%2017.6951%20137.134%2017.8739C137.783%2018.0479%20138.262%2018.402%20138.571%2018.9361C138.884%2019.4527%20138.958%2020.0181%20138.793%2020.6325C138.629%2021.2468%20138.279%2021.7082%20137.745%2022.0166C137.216%2022.3074%20136.626%2022.3658%20135.977%2022.1918Z'%20fill='%234A3830'/%3e%3c/svg%3e" alt="logo" />
+            </a>
+            <!-- 搜尋-pc -->
+            <form action="/" class="position-relative d-none d-lg-block">
+                <span
+                    class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y text-natural-60 ps-6"
+                >
+                    search
+                </span>
+                <input
+                    type="search"
+                    class="form-control py-5 ps-20 pe-6 rounded-1 search-pc"
+                    name="search"
+                    id="seardh-pc"
+                    placeholder="搜尋景點、地點或城市"
+                />
+            </form>
+        </div>
+        <!-- 搜尋-mobile -->
+        <div class="position-absolute start-0 end-0 z-1 px-6 bg-white">
+            <div class="collapse" id="collapseSearch">
+                <div class="d-flex align-items-center">
+                    <form action="/" class="position-relative w-100">
+                        <span
+                            class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y text-natural-60 ps-6"
+                        >
+                            search
+                        </span>
+                        <input
+                            type="search"
+                            class="form-control py-4 ps-20 pe-6 rounded-1"
+                            name="search"
+                            id="seardh"
+                            placeholder="搜尋景點、地點或城市"
+                        />
+                    </form>
+                    <button
+                        type="button"
+                        class="btn p-4 border-0"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSearch"
+                    >
+                        <span class="material-icons-outlined align-bottom">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button
+            type="button"
+            class="btn p-4 border-0 d-lg-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSearch"
+        >
+            <span class="material-icons-outlined align-bottom"> search </span>
+        </button>
+        <!-- 購物車連結 -->
+        <a href="cart.html" class="btn py-4 px-6 border-0 me-lg-8">
+            <span class="position-relative">
+                <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-alert text-white p-0 cart-tag"
+                >
+                    2
+                </span>
+                <span class="material-icons-outlined align-bottom">
+                    shopping_cart
+                </span>
+            </span>
+        </a>
+        <div>
+            <!-- 漢堡選單 -->
+            <div class="d-lg-none">
+                <button
+                    class="btn p-4 border-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="material-icons-outlined align-bottom">
+                        menu
+                    </span>
+                </button>
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                >
+                    <div class="offcanvas-header pt-12 px-12 ms-auto">
+                        <button
+                            type="button"
+                            class="btn p-0 border-0"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        >
+                            <span class="material-icons-outlined align-bottom">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <div
+                        class="offcanvas-body d-flex flex-column pt-0 px-12 pb-12"
+                    >
+                        <!-- offcanvas 使用者狀態 -->
+                        <div class="pb-8 border-bottom">
+                            <!-- 未登入 -->
+                            <div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <div
+                                        class="user-img bg-primary-40 rounded-circle p-2"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16%209C16%2010.0609%2015.5786%2011.0783%2014.8284%2011.8284C14.0783%2012.5786%2013.0609%2013%2012%2013C10.9391%2013%209.92172%2012.5786%209.17157%2011.8284C8.42143%2011.0783%208%2010.0609%208%209C8%207.93913%208.42143%206.92172%209.17157%206.17157C9.92172%205.42143%2010.9391%205%2012%205C13.0609%205%2014.0783%205.42143%2014.8284%206.17157C15.5786%206.92172%2016%207.93913%2016%209ZM14%209C14%209.53043%2013.7893%2010.0391%2013.4142%2010.4142C13.0391%2010.7893%2012.5304%2011%2012%2011C11.4696%2011%2010.9609%2010.7893%2010.5858%2010.4142C10.2107%2010.0391%2010%209.53043%2010%209C10%208.46957%2010.2107%207.96086%2010.5858%207.58579C10.9609%207.21071%2011.4696%207%2012%207C12.5304%207%2013.0391%207.21071%2013.4142%207.58579C13.7893%207.96086%2014%208.46957%2014%209Z'%20fill='%23F3EEEC'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M12%201C5.925%201%201%205.925%201%2012C1%2018.075%205.925%2023%2012%2023C18.075%2023%2023%2018.075%2023%2012C23%205.925%2018.075%201%2012%201ZM3%2012C3%2014.09%203.713%2016.014%204.908%2017.542C5.74723%2016.4399%206.8299%2015.5467%208.07143%2014.9323C9.31297%2014.3179%2010.6797%2013.9988%2012.065%2014C13.4323%2013.9987%2014.7819%2014.3095%2016.0109%2014.9088C17.2399%2015.508%2018.316%2016.3799%2019.157%2017.458C20.0234%2016.3216%2020.6068%2014.9952%2020.8589%2013.5886C21.111%2012.182%2021.0244%2010.7355%2020.6065%209.36898C20.1886%208.00243%2019.4512%206.75505%2018.4555%205.73004C17.4598%204.70503%2016.2343%203.93186%2014.8804%203.47451C13.5265%203.01716%2012.0832%202.88877%2010.6699%203.09997C9.25652%203.31117%207.91379%203.85589%206.75277%204.68905C5.59175%205.52222%204.64581%206.61987%203.99323%207.8912C3.34065%209.16252%203.00018%2010.571%203%2012ZM12%2021C9.93395%2021.0031%207.93027%2020.2923%206.328%2018.988C6.97293%2018.0647%207.83134%2017.3109%208.83019%2016.7907C9.82905%2016.2705%2010.9388%2015.9992%2012.065%2016C13.1772%2015.9991%2014.2735%2016.2636%2015.2629%2016.7714C16.2524%2017.2793%2017.1064%2018.0159%2017.754%2018.92C16.1393%2020.2667%2014.1026%2021.0029%2012%2021Z'%20fill='%23F3EEEC'/%3e%3c/svg%3e"
+                                            alt="ic_profile"
+                                            class="align-bottom"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold text-primary">訪客</p>
+                                        <p>未登入</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 已登入 -->
+                            <!-- <div class="d-flex align-items-center gap-4">
+                                <div class="user-img">
+                                    <img
+                                        src="/assets/images/user/avatar-1.png"
+                                        alt="avatar-1"
+                                        class="align-bottom"
+                                    />
+                                </div>
+                                <div>
+                                    <p class="fw-bold text-primary">Jessica</p>
+                                    <p>jessica.yen@gamil.com</p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- offcanvas 內容 -->
+                        <!-- 未登入 -->
+                        <div class="d-flex flex-column flex-grow-1">
+                            <div class="pt-12">
+                                <h2 class="fs-7 text-primary mb-2">
+                                    歡迎來到 ZOBAA
+                                </h2>
+                                <p>
+                                    加入會員即可立即訂購、收藏行程，並享相關優惠好禮。
+                                </p>
+                            </div>
+                            <div class="mt-auto">
+                                <a
+                                    href="login.html"
+                                    class="btn btn-primary w-100"
+                                    >登入 / 註冊</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 已登入 -->
+                        <!-- <div class="d-flex flex-column flex-grow-1 pt-8">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><img
+                                            src="/assets/images/ic_order.svg"
+                                            alt="ic_order"
+                                            class="align-bottom me-4"
+                                        />訂單管理</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><span
+                                            class="material-icons-outlined align-bottom me-4"
+                                        >
+                                            favorite_border </span
+                                        >我的收藏</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><img
+                                            src="/assets/images/ic_setting.svg"
+                                            alt="ic_setting"
+                                            class="align-bottom me-4"
+                                        />帳號設定</a
+                                    >
+                                </li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a
+                                    href="#"
+                                    class="btn py-6 px-0 border-0 w-100 text-start fw-normal"
+                                    ><img
+                                        src="/assets/images/ic_logout.svg"
+                                        alt="ic_logout"
+                                        class="me-4 align-bottom"
+                                    />登出</a
+                                >
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- navbar 使用者狀態 -->
+            <div class="d-none d-lg-block">
+                <!-- 未登入 -->
+                <a href="login.html" class="btn btn-primary">登入 / 註冊</a>
+                <!-- 已登入 -->
+                <!-- <div class="d-flex align-items-center gap-4">
+                    <a href="user.html" class="user-img">
+                        <img
+                            src="/assets/images/user/avatar-1.png"
+                            alt="user-img"
+                        />
+                    </a>
+                    <span class="text-primary fw-bold">Jessica</span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+        <main class="position-relative">
+            <!-- 購物車內容 -->
+            <section class="bg-natural-10 py-40">
+                <div class="container">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="mb-12">
+                            <img src="/week8_travel_platform/assets/empty-D6Af7bNa.svg" alt="empty" />
+                        </div>
+                        <div>
+                            <p class="fw-bold text-center mb-12">
+                                購物車還沒有商品，立即逛逛！
+                            </p>
+                            <a href="product.html" class="btn btn-primary px-40"
+                                >看看其他行程</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 其他人也買了 -->
+            <section class="bg-natural-10 py-20 py-md-60 overflow-hidden">
+                <div class="container">
+                    <!-- 標題 -->
+                    <h2
+                        class="text-primary fs-4 d-flex align-items-center mb-12"
+                    >
+                        <img
+                            src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.227%2010.2919L16.5135%2013.6216H19.2595V16.3243H15.9297L15.1514%2020H12.2757L13.0541%2016.3243H9.11892L8.34054%2020H5.48649L6.26486%2016.3243H3V13.6216H6.84865L7.56216%2010.2919H4.31892V7.58919H8.14595L8.9027%204H11.7568L11%207.58919H14.9351L15.6919%204H18.5676L17.8108%207.58919H20.5784V10.2919H17.227ZM14.3514%2010.2919H10.4162L9.7027%2013.6216H13.6378L14.3514%2010.2919Z'%20fill='%234A3830'/%3e%3c/svg%3e"
+                            alt="pound_sign"
+                            class="me-4"
+                        />其他旅人也買了
+                    </h2>
+                    <!-- 其他人也買了-輪播 -->
+                    <div
+                        class="also-bought-swiper-wrapper custom-swiper-wrapper position-relative"
+                    >
+                        <!-- Swiper 主容器 -->
+                        <div class="also-bought-swiper custom-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 多個 Slides -->
+                                <div class="swiper-slide">
+                                    <div class="card bg-transparent">
+                                        <div
+                                            class="overflow-hidden rounded-3 mb-8 position-relative"
+                                        >
+                                            <span
+                                                class="material-icons-outlined toggle-label text-white"
+                                            >
+                                                favorite_border
+                                            </span>
+                                            <img
+                                                src="/week8_travel_platform/assets/top-1-DLY_45Sw.png"
+                                                class="card-img-top"
+                                                alt="also-bought-1"
+                                            />
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div>
+                                                <h4
+                                                    class="custom-title text-black lh-base fs-8 mb-4 text-ellipsis-2"
+                                                >
+                                                    環球影城超值一日遊｜哈利波特園區＋快速通關體驗
+                                                </h4>
+                                                <div class="d-flex gap-4 mb-4">
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >即買即用</span
+                                                    >
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >5 天前可免費取消</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="d-flex pb-8 border-bottom mb-8"
+                                                >
+                                                    <div
+                                                        class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined text-warning fs-10"
+                                                        >
+                                                            star
+                                                        </span>
+                                                        <span class="fs-9"
+                                                            >4.8</span
+                                                        >
+                                                        <span
+                                                            class="text-natural-60 fs-9"
+                                                            >(1029)</span
+                                                        >
+                                                    </div>
+                                                    <div class="fs-9">
+                                                        1000+ 個已訂購
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5
+                                                        class="text-primary fs-7"
+                                                    >
+                                                        NT$ 5,480
+                                                    </h5>
+                                                    <p
+                                                        class="text-natural-70 fs-9 text-decoration-line-through"
+                                                    >
+                                                        NT$ 6,200
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card bg-transparent">
+                                        <div
+                                            class="overflow-hidden rounded-3 mb-8 position-relative"
+                                        >
+                                            <span
+                                                class="material-icons-outlined toggle-label text-white"
+                                            >
+                                                favorite_border
+                                            </span>
+                                            <img
+                                                src="/week8_travel_platform/assets/top-2-DLkjmVc3.png"
+                                                class="card-img-top"
+                                                alt="also-bought-2"
+                                            />
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div>
+                                                <h4
+                                                    class="custom-title text-black lh-base fs-8 mb-4 text-ellipsis-2"
+                                                >
+                                                    奈良梅花鹿餵食體驗＋和服散策｜日式風情輕旅行
+                                                </h4>
+                                                <div class="d-flex gap-4 mb-4">
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >中文導覽</span
+                                                    >
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >5 天前可免費取消</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="d-flex pb-8 border-bottom mb-8"
+                                                >
+                                                    <div
+                                                        class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined text-warning fs-10"
+                                                        >
+                                                            star
+                                                        </span>
+                                                        <span class="fs-9"
+                                                            >4.7</span
+                                                        >
+                                                        <span
+                                                            class="text-natural-60 fs-9"
+                                                            >(880)</span
+                                                        >
+                                                    </div>
+                                                    <div class="fs-9">
+                                                        900+ 個已訂購
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5
+                                                        class="text-primary fs-7"
+                                                    >
+                                                        NT$ 2,250
+                                                    </h5>
+                                                    <p
+                                                        class="text-natural-70 fs-9 text-decoration-line-through"
+                                                    >
+                                                        NT$ 2,800
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card bg-transparent">
+                                        <div
+                                            class="overflow-hidden rounded-3 mb-8 position-relative"
+                                        >
+                                            <span
+                                                class="material-icons-outlined toggle-label text-white"
+                                            >
+                                                favorite_border
+                                            </span>
+                                            <img
+                                                src="/week8_travel_platform/assets/top-3-Ba63bpk4.png"
+                                                class="card-img-top"
+                                                alt="also-bought-3"
+                                            />
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div>
+                                                <h4
+                                                    class="custom-title text-black lh-base fs-8 mb-4 text-ellipsis-2"
+                                                >
+                                                    黑門市場美食巡禮｜在地職人帶路吃遍大阪經典小吃
+                                                </h4>
+                                                <div class="d-flex gap-4 mb-4">
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >專業導覽</span
+                                                    >
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >5 天前可免費取消</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="d-flex pb-8 border-bottom mb-8"
+                                                >
+                                                    <div
+                                                        class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined text-warning fs-10"
+                                                        >
+                                                            star
+                                                        </span>
+                                                        <span class="fs-9"
+                                                            >4.6</span
+                                                        >
+                                                        <span
+                                                            class="text-natural-60 fs-9"
+                                                            >(540)</span
+                                                        >
+                                                    </div>
+                                                    <div class="fs-9">
+                                                        700+ 個已訂購
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5
+                                                        class="text-primary fs-7"
+                                                    >
+                                                        NT$ 1,580
+                                                    </h5>
+                                                    <p
+                                                        class="text-natural-70 fs-9 text-decoration-line-through"
+                                                    >
+                                                        NT$ 2,500
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card bg-transparent">
+                                        <div
+                                            class="overflow-hidden rounded-3 mb-8 position-relative"
+                                        >
+                                            <span
+                                                class="material-icons-outlined toggle-label text-white"
+                                            >
+                                                favorite_border
+                                            </span>
+                                            <img
+                                                src="/week8_travel_platform/assets/top-4-FDuWEWBq.png"
+                                                class="card-img-top"
+                                                alt="also-bought-4"
+                                            />
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div>
+                                                <h4
+                                                    class="custom-title text-black lh-base fs-8 mb-4 text-ellipsis-2"
+                                                >
+                                                    大阪夜景直升機體驗｜空中俯瞰梅田摩天輪＋海遊館
+                                                </h4>
+                                                <div class="d-flex gap-4 mb-4">
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >即買即用</span
+                                                    >
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >7 天前可免費取消</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="d-flex pb-8 border-bottom mb-8"
+                                                >
+                                                    <div
+                                                        class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined text-warning fs-10"
+                                                        >
+                                                            star
+                                                        </span>
+                                                        <span class="fs-9"
+                                                            >4.7</span
+                                                        >
+                                                        <span
+                                                            class="text-natural-60 fs-9"
+                                                            >(319)</span
+                                                        >
+                                                    </div>
+                                                    <div class="fs-9">
+                                                        600+ 個已訂購
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5
+                                                        class="text-primary fs-7"
+                                                    >
+                                                        NT$6,890
+                                                    </h5>
+                                                    <p
+                                                        class="text-natural-70 fs-9 text-decoration-line-through"
+                                                    >
+                                                        NT$ 8,890
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card bg-transparent">
+                                        <div
+                                            class="overflow-hidden rounded-3 mb-8 position-relative"
+                                        >
+                                            <span
+                                                class="material-icons-outlined toggle-label text-white"
+                                            >
+                                                favorite_border
+                                            </span>
+                                            <img
+                                                src="/week8_travel_platform/assets/top-1-DLY_45Sw.png"
+                                                class="card-img-top"
+                                                alt="also-bought-1"
+                                            />
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div>
+                                                <h4
+                                                    class="custom-title text-black lh-base fs-8 mb-4 text-ellipsis-2"
+                                                >
+                                                    環球影城超值一日遊｜哈利波特園區＋快速通關體驗
+                                                </h4>
+                                                <div class="d-flex gap-4 mb-4">
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >即買即用</span
+                                                    >
+                                                    <span
+                                                        class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                        >5 天前可免費取消</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="d-flex pb-8 border-bottom mb-8"
+                                                >
+                                                    <div
+                                                        class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined text-warning fs-10"
+                                                        >
+                                                            star
+                                                        </span>
+                                                        <span class="fs-9"
+                                                            >4.8</span
+                                                        >
+                                                        <span
+                                                            class="text-natural-60 fs-9"
+                                                            >(1029)</span
+                                                        >
+                                                    </div>
+                                                    <div class="fs-9">
+                                                        1000+ 個已訂購
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5
+                                                        class="text-primary fs-7"
+                                                    >
+                                                        NT$ 5,480
+                                                    </h5>
+                                                    <p
+                                                        class="text-natural-70 fs-9 text-decoration-line-through"
+                                                    >
+                                                        NT$ 6,200
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="also-bought-button-prev custom-button-prev btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                        >
+                            <span
+                                class="material-icons-outlined align-bottom text-primary"
+                            >
+                                arrow_back
+                            </span>
+                        </button>
+                        <button
+                            type="button"
+                            class="also-bought-button-next custom-button-next btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                        >
+                            <span
+                                class="material-icons-outlined align-bottom text-primary"
+                            >
+                                arrow_forward
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 底部列-展開明細+前往結帳 -->
+            <!-- <section class="bg-white py-6 px-8 border-top d-xl-none bill">
+                <div class="container">
+                    <div
+                        class="d-flex justify-content-between align-items-center"
+                    >
+                        <div>
+                            <button
+                                type="button"
+                                class="btn fs-10 fw-normal p-0 border-0 mb-2"
+                                data-bs-toggle="modal"
+                                data-bs-target="#billModal"
+                            >
+                                展開明細<span
+                                    class="material-icons-outlined align-bottom fs-8 ms-2"
+                                >
+                                    keyboard_arrow_up
+                                </span>
+                            </button>
+                            <h2 class="text-black fs-7">NT$ 3,600</h2>
+                        </div>
+                        <a href="#" class="btn btn-primary">前往結賬</a>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+
+        <!-- 頁尾 -->
+        <footer class="bg-black py-40 py-lg-50">
+    <div class="container">
+        <div
+            class="d-flex justify-content-between flex-column flex-lg-row gap-20"
+        >
+            <div>
+                <a href="index.html" class="mb-20 mb-lg-16">
+                    <img src="data:image/svg+xml,%3csvg%20width='142'%20height='21'%20viewBox='0%200%20142%2021'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.9341%207.93199L17.0346%2012.1297H20.4963V15.5369H16.2986L15.3174%2020.1707H11.6921L12.6734%2015.5369H7.71247L6.73119%2020.1707H3.13317L4.11445%2015.5369H-0.00146484V12.1297H4.85041L5.74991%207.93199H1.66126V4.52478H6.48587L7.43989%200H11.0379L10.0839%204.52478H15.0448L15.9988%200H19.6241L18.6701%204.52478H22.1591V7.93199H17.9341ZM14.3088%207.93199H9.34793L8.44843%2012.1297H13.4093L14.3088%207.93199Z'%20fill='white'/%3e%3cpath%20d='M36.8237%2016.9543H45.3826V20.1707H32.408V17.2269L40.9124%204.36123H32.408V1.14482H45.3826V4.08866L36.8237%2016.9543Z'%20fill='white'/%3e%3cpath%20d='M58.0076%2020.3615C56.2268%2020.3615%2054.5913%2019.9436%2053.1012%2019.1077C51.6111%2018.2717%2050.43%2017.1178%2049.5577%2015.6459C48.6855%2014.1558%2048.2494%2012.4749%2048.2494%2010.6032C48.2494%208.74972%2048.6855%207.087%2049.5577%205.61509C50.43%204.125%2051.6111%202.962%2053.1012%202.1261C54.5913%201.2902%2056.2268%200.872247%2058.0076%200.872247C59.8066%200.872247%2061.4421%201.2902%2062.914%202.1261C64.4041%202.962%2065.5762%204.125%2066.4303%205.61509C67.3025%207.087%2067.7386%208.74972%2067.7386%2010.6032C67.7386%2012.4749%2067.3025%2014.1558%2066.4303%2015.6459C65.5762%2017.1178%2064.4041%2018.2717%2062.914%2019.1077C61.4239%2019.9436%2059.7885%2020.3615%2058.0076%2020.3615ZM58.0076%2016.9543C59.1525%2016.9543%2060.161%2016.6999%2061.0332%2016.1911C61.9055%2015.6641%2062.5869%2014.9191%2063.0776%2013.9559C63.5682%2012.9928%2063.8135%2011.8753%2063.8135%2010.6032C63.8135%209.33122%2063.5682%208.22274%2063.0776%207.27781C62.5869%206.3147%2061.9055%205.57874%2061.0332%205.06993C60.161%204.56112%2059.1525%204.30672%2058.0076%204.30672C56.8628%204.30672%2055.8452%204.56112%2054.9548%205.06993C54.0825%205.57874%2053.4011%206.3147%2052.9104%207.27781C52.4198%208.22274%2052.1745%209.33122%2052.1745%2010.6032C52.1745%2011.8753%2052.4198%2012.9928%2052.9104%2013.9559C53.4011%2014.9191%2054.0825%2015.6641%2054.9548%2016.1911C55.8452%2016.6999%2056.8628%2016.9543%2058.0076%2016.9543Z'%20fill='white'/%3e%3cpath%20d='M81.9169%2010.4124C82.989%2010.6123%2083.8704%2011.1484%2084.5609%2012.0206C85.2514%2012.8929%2085.5967%2013.8923%2085.5967%2015.019C85.5967%2016.0366%2085.3423%2016.9361%2084.8335%2017.7175C84.3428%2018.4807%2083.625%2019.0804%2082.6801%2019.5165C81.7352%2019.9526%2080.6176%2020.1707%2079.3274%2020.1707H71.1228V1.14482H78.9731C80.2633%201.14482%2081.3717%201.3538%2082.2985%201.77175C83.2434%202.1897%2083.9521%202.7712%2084.4246%203.51624C84.9152%204.26129%2085.1606%205.10628%2085.1606%206.05121C85.1606%207.15969%2084.8607%208.08645%2084.261%208.8315C83.6796%209.57654%2082.8982%2010.1035%2081.9169%2010.4124ZM74.9389%208.99504H78.4279C79.3365%208.99504%2080.0361%208.79515%2080.5267%208.39537C81.0174%207.97742%2081.2627%207.38684%2081.2627%206.62362C81.2627%205.86041%2081.0174%205.26982%2080.5267%204.85187C80.0361%204.43392%2079.3365%204.22494%2078.4279%204.22494H74.9389V8.99504ZM78.7822%2017.0633C79.709%2017.0633%2080.4268%2016.8453%2080.9356%2016.4091C81.4626%2015.973%2081.7261%2015.3552%2081.7261%2014.5556C81.7261%2013.7379%2081.4535%2013.1019%2080.9084%2012.6476C80.3632%2012.1751%2079.6272%2011.9389%2078.7005%2011.9389H74.9389V17.0633H78.7822Z'%20fill='white'/%3e%3cpath%20d='M100.85%2016.5454H93.2719L92.018%2020.1707H88.0111L94.8528%201.11756H99.2958L106.138%2020.1707H102.103L100.85%2016.5454ZM99.8137%2013.4926L97.0607%205.53331L94.3077%2013.4926H99.8137Z'%20fill='white'/%3e%3cpath%20d='M120.906%2016.5454H113.329L112.075%2020.1707H108.068L114.91%201.11756H119.353L126.194%2020.1707H122.16L120.906%2016.5454ZM119.87%2013.4926L117.117%205.53331L114.364%2013.4926H119.87Z'%20fill='white'/%3e%3cpath%20d='M140.931%201.82191L137.102%2014.4259L133.995%2013.5934L136.955%200.756634L140.931%201.82191ZM133.977%2020.1918C133.31%2020.0131%20132.811%2019.6631%20132.48%2019.1418C132.172%2018.6076%20132.1%2018.0334%20132.265%2017.4191C132.429%2016.8047%20132.776%2016.3521%20133.306%2016.0613C133.858%2015.7576%20134.467%2015.6951%20135.134%2015.8739C135.783%2016.0479%20136.262%2016.402%20136.571%2016.9361C136.884%2017.4527%20136.958%2018.0181%20136.793%2018.6325C136.629%2019.2468%20136.279%2019.7082%20135.745%2020.0166C135.216%2020.3074%20134.626%2020.3658%20133.977%2020.1918Z'%20fill='white'/%3e%3c/svg%3e" alt="logo" />
+                </a>
+                <ul
+                    class="list-unstyled d-flex flex-column flex-lg-row gap-8 gap-lg-16 mb-0"
+                >
+                    <li>
+                        <a class="text-white" href="#">常見問題</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#">關於我們</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#">隱私權政策</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="#">使用者條款</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul
+                    class="list-unstyled d-flex justify-content-lg-end gap-8 mb-8"
+                >
+                    <li>
+                        <a href="#"
+                            ><img src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_42659)'%3e%3cpath%20opacity='0.7'%20d='M20%200.5C30.7696%200.5%2039.5%209.23045%2039.5%2020C39.5%2030.7696%2030.7696%2039.5%2020%2039.5C9.23045%2039.5%200.5%2030.7696%200.5%2020C0.5%209.23045%209.23045%200.5%2020%200.5Z'%20stroke='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M29%2019.0263C29%2015.152%2024.9625%2012%2020%2012C15.0377%2012%2011%2015.152%2011%2019.0263C11%2022.4994%2014.2019%2025.4086%2018.527%2025.9589C18.8199%2026.0196%2019.2188%2026.1451%2019.3198%2026.386C19.4106%2026.6047%2019.3793%2026.9474%2019.3488%2027.1685C19.3488%2027.1685%2019.2436%2027.7796%2019.2204%2027.91C19.1814%2028.1288%2019.0395%2028.7659%2020%2028.3767C20.9608%2027.9874%2025.1828%2025.4404%2027.071%2023.3494C28.3754%2021.9736%2029%2020.577%2029%2019.0263ZM14.4146%2021.1339C14.1861%2021.1339%2014%2020.9408%2014%2020.703V17.4397C14%2017.2022%2014.2116%2017.0089%2014.48%2017.0089C14.7484%2017.0089%2014.9%2017.2006%2014.9%2017.4397V20.2724H15.9854C16.2143%2020.2724%2016.4%2020.4657%2016.4%2020.703C16.4%2020.9408%2016.2143%2021.1339%2015.9854%2021.1339H14.4146ZM18.2%2020.703C18.2%2020.9408%2017.9981%2021.1339%2017.7501%2021.1339C17.5019%2021.1339%2017.3%2020.9408%2017.3%2020.703V17.4397C17.3%2017.2022%2017.5019%2017.0089%2017.7501%2017.0089C17.9981%2017.0089%2018.2%2017.2022%2018.2%2017.4397V20.703ZM22.7%2020.703C22.7%2020.889%2022.5717%2021.0532%2022.3797%2021.1116C22.3316%2021.1265%2022.2813%2021.1339%2022.2309%2021.1339C22.0849%2021.1339%2021.9449%2021.0696%2021.8566%2020.9616L20.0372%2018.6842V20.703C20.0372%2020.9408%2019.8272%2021.1339%2019.5687%2021.1339C19.3103%2021.1339%2019.1%2020.9408%2019.1%2020.703V17.4397C19.1%2017.2541%2019.2288%2017.0899%2019.4203%2017.0312C19.4686%2017.0162%2019.5187%2017.0089%2019.5691%2017.0089C19.7153%2017.0089%2019.8554%2017.0731%2019.9431%2017.1812L21.7631%2019.4587V17.4397C21.7631%2017.2022%2021.9735%2017.0089%2022.2316%2017.0089C22.4902%2017.0089%2022.7%2017.2022%2022.7%2017.4397V20.703ZM25.5853%2018.6407C25.8142%2018.6407%2026%2018.8339%2026%2019.0715C26%2019.3088%2025.8142%2019.502%2025.5853%2019.502H24.4294V20.2724H25.5853C25.8138%2020.2724%2026%2020.4657%2026%2020.703C26%2020.9408%2025.8138%2021.1339%2025.5853%2021.1339H24.0145C23.7863%2021.1339%2023.6%2020.9408%2023.6%2020.703V19.0726V19.0715V17.4397C23.6%2017.2022%2023.7859%2017.0089%2024.0145%2017.0089H25.5853C25.8142%2017.0089%2026%2017.2022%2026%2017.4397C26%2017.6772%2025.8142%2017.8702%2025.5853%2017.8702H24.4294V18.6407H25.5853Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_42659'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Line"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><img src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_42662)'%3e%3cpath%20opacity='0.7'%20d='M20%200.5C30.7696%200.5%2039.5%209.23045%2039.5%2020C39.5%2030.7696%2030.7696%2039.5%2020%2039.5C9.23045%2039.5%200.5%2030.7696%200.5%2020C0.5%209.23045%209.23045%200.5%2020%200.5Z'%20stroke='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20%2011.9946C20.855%2011.9946%2021.732%2012.0166%2022.582%2012.0526L23.586%2012.1006L24.547%2012.1576L25.447%2012.2186L26.269%2012.2826C27.161%2012.3509%2028.0004%2012.7316%2028.6395%2013.3577C29.2786%2013.9838%2029.6764%2014.8152%2029.763%2015.7056L29.803%2016.1306L29.878%2017.0406C29.948%2017.9836%2030%2019.0116%2030%2019.9946C30%2020.9776%2029.948%2022.0056%2029.878%2022.9486L29.803%2023.8586C29.79%2024.0046%2029.777%2024.1456%2029.763%2024.2836C29.6764%2025.1742%2029.2784%2026.0058%2028.6391%2026.6319C27.9999%2027.258%2027.1602%2027.6386%2026.268%2027.7066L25.448%2027.7696L24.548%2027.8316L23.586%2027.8886L22.582%2027.9366C21.732%2027.9726%2020.855%2027.9946%2020%2027.9946C19.145%2027.9946%2018.268%2027.9726%2017.418%2027.9366L16.414%2027.8886L15.453%2027.8316L14.553%2027.7696L13.731%2027.7066C12.839%2027.6384%2011.9996%2027.2577%2011.3605%2026.6316C10.7214%2026.0055%2010.3236%2025.1741%2010.237%2024.2836L10.197%2023.8586L10.122%2022.9486C10.0455%2021.9658%2010.0048%2020.9804%2010%2019.9946C10%2019.0116%2010.052%2017.9836%2010.122%2017.0406L10.197%2016.1306C10.21%2015.9846%2010.223%2015.8436%2010.237%2015.7056C10.3235%2014.8153%2010.7212%2013.984%2011.3601%2013.358C11.999%2012.7319%2012.8381%2012.3511%2013.73%2012.2826L14.551%2012.2186L15.451%2012.1576L16.413%2012.1006L17.417%2012.0526C18.268%2012.0166%2019.145%2011.9946%2020%2011.9946ZM18%2017.5696V22.4196C18%2022.8816%2018.5%2023.1696%2018.9%2022.9396L23.1%2020.5146C23.1914%2020.462%2023.2673%2020.3863%2023.3201%2020.295C23.3729%2020.2037%2023.4007%2020.1001%2023.4007%2019.9946C23.4007%2019.8892%2023.3729%2019.7856%2023.3201%2019.6943C23.2673%2019.603%2023.1914%2019.5272%2023.1%2019.4746L18.9%2017.0506C18.8088%2016.998%2018.7053%2016.9702%2018.5999%2016.9702C18.4945%2016.9703%2018.3911%2016.998%2018.2998%2017.0507C18.2086%2017.1034%2018.1329%2017.1792%2018.0802%2017.2705C18.0276%2017.3618%2017.9999%2017.4653%2018%2017.5706V17.5696Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_42662'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="YouTube"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><img
+                                src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_187_42665)'%3e%3cpath%20opacity='0.7'%20d='M20%200.5C30.7696%200.5%2039.5%209.23045%2039.5%2020C39.5%2030.7696%2030.7696%2039.5%2020%2039.5C9.23045%2039.5%200.5%2030.7696%200.5%2020C0.5%209.23045%209.23045%200.5%2020%200.5Z'%20stroke='white'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M21.5983%2020.9736H24.1413L24.5219%2018.0404H21.5983V16.1677C21.5983%2015.3184%2021.8357%2014.7397%2023.0615%2014.7397L24.625%2014.739V12.1156C24.3545%2012.0799%2023.4265%2012%2022.3467%2012C20.0926%2012%2018.5494%2013.3669%2018.5494%2015.8773V18.0404H16V20.9736H18.5494V28.5H21.5983V20.9736Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_187_42665'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                                alt="Facebook"
+                        /></a>
+                    </li>
+                </ul>
+                <p class="fs-9 text-natural-50">
+                    copyright © 2025 ZOBAA 旅遊網站 All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <!-- 展開明細+前往結帳 Bill Modal -->
+        <div
+            class="modal fade bill-modal"
+            id="billModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="billModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-between">
+                        <h1
+                            class="modal-title text-black lh-base fs-9"
+                            id="billModalLabel"
+                        >
+                            Modal title
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn p-0 border-0 link-natural-100"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span class="material-icons-outlined align-bottom">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body py-12">
+                        <p class="fs-9 d-flex justify-content-between mb-6">
+                            <span>商品小計</span
+                            ><span class="fw-bold">NT$ 3600</span>
+                        </p>
+                        <p
+                            class="fs-9 d-flex justify-content-between pb-8 border-bottom mb-8"
+                        >
+                            <span>優惠折抵 </span
+                            ><span class="fw-bold text-primary-60">- 100</span>
+                        </p>
+                        <p
+                            class="d-flex justify-content-between align-items-center"
+                        >
+                            <span class="fs-9">總計</span
+                            ><span class="text-black fw-bold fs-7"
+                                >NT$ 3,600</span
+                            >
+                        </p>
+                    </div>
+                    <div class="modal-footer px-8">
+                        <div
+                            class="d-flex justify-content-between align-items-center w-100 m-0"
+                        >
+                            <div>
+                                <button
+                                    type="button"
+                                    class="btn fs-10 fw-normal p-0 border-0 mb-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#billModal"
+                                >
+                                    收合明細<span
+                                        class="material-icons-outlined align-bottom fs-8 ms-2"
+                                    >
+                                        keyboard_arrow_down
+                                    </span>
+                                </button>
+                                <h2 class="text-black fs-7">NT$ 3,600</h2>
+                            </div>
+                            <a href="#" class="btn btn-primary">前往結賬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.js"></script>
+    </body>
+</html>
