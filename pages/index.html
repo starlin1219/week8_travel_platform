@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/assets/images/favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <title>ZOBAA! 旅遊網站</title>
+    </head>
+    <body>
+        <!-- 導覽列 -->
+        <%- include('./layout/header'); -%>
+
+        <!-- Hero 區塊 -->
+        <section class="hero pt-56 pt-md-150">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2
+                            class="badge fs-8 fs-md-7 bg-tint p-4 p-md-8 rounded-md-2 mb-6"
+                        >
+                            ZOBAA 旅行推薦平台
+                        </h2>
+                        <h1 class="text-primary fs-4 fs-md-1 mb-4 mb-md-12">
+                            <span class="d-inline-block mb-2 mb-lg-0"
+                                >用旅行，</span
+                            ><br class="d-lg-none" /><span
+                                class="d-inline-block"
+                                >收藏世界的樣子</span
+                            >
+                        </h1>
+                        <p
+                            class="text-primary-80 fw-bold fs-9 fs-md-7 mb-12 mb-md-20"
+                        >
+                            ZOBAA
+                            整合熱門景點推薦、即時優惠、獨家行程，從比價到訂購，一次完成你的完美出遊計畫。
+                        </p>
+                        <form action="/" class="hero-search position-relative">
+                            <span
+                                class="material-icons-outlined align-bottom text-natural-60 position-absolute top-50 start-0 translate-middle-y ps-4"
+                            >
+                                search
+                            </span>
+                            <input
+                                type="search"
+                                class="form-control ps-20 py-10 pe-71 rounded-2"
+                                name="hero-search"
+                                id="hero-search"
+                                placeholder="搜尋景點、地點或城市"
+                            />
+                            <a
+                                href="search.html"
+                                class="btn btn-primary btn-sm position-absolute top-50 end-0 translate-middle-y me-4 border-0"
+                            >
+                                開始探索旅程
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 你的專屬推薦 -->
+        <section class="recommend py-20 py-md-60 overflow-hidden">
+            <div class="container">
+                <!-- 專屬推薦-標題 -->
+                <div
+                    class="text-white d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center mb-20 mb-md-40"
+                >
+                    <h3 class="fs-4 fs-md-1 mb-12 mb-lg-0">
+                        你的<br />專屬推薦
+                    </h3>
+                    <div class="recommend-subtitle fw-bold">
+                        <p class="fs-9 fs-md-7 lh-md-sm mb-6 mb-md-12">
+                            來看我們的精選推薦行程，滿意度高達 99.2%
+                            給自己一個難忘的旅遊行程吧！
+                        </p>
+                        <a
+                            href="#"
+                            class="fs-9 fs-md-8 d-flex align-items-center"
+                            >查看全部行程<span
+                                class="material-icons-outlined align-bottom fs-8 fs-md-6 ms-4"
+                            >
+                                arrow_forward
+                            </span></a
+                        >
+                    </div>
+                </div>
+                <!-- 專屬推薦-輪播 -->
+                <div>
+                    <!-- Swiper 主容器 -->
+                    <div class="recommend-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- 多個 Slides -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="card recommend-card text-bg-dark rounded-4 rounded-md-5 overflow-hidden h-100"
+                                >
+                                    <img
+                                        src="/assets/images/index/recommend.png"
+                                        class="card-img h-100 object-fit-cover"
+                                        alt="recommend-1"
+                                    />
+                                    <div
+                                        class="card-img-overlay p-md-16 d-flex flex-column justify-content-end"
+                                    >
+                                        <div class="text-white">
+                                            <h3 class="fs-5 fs-md-3 mb-4">
+                                                峇里島渡假漫遊
+                                            </h3>
+                                            <p class="fs-9 fs-md-8">
+                                                精選五星級海灘度假村，專屬私人管家服務，讓您徹底放鬆身心。
+                                            </p>
+                                        </div>
+                                        <a
+                                            href="product.html"
+                                            class="btn btn-natural-0 px-10 ps-10 pe-12 border-0 rounded-pill mt-12 d-flex justify-content-between align-items-center gap-4"
+                                            >訂購行程<span
+                                                class="material-icons-outlined"
+                                            >
+                                                arrow_forward
+                                            </span></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="card recommend-card text-bg-dark rounded-4 rounded-md-5 overflow-hidden h-100"
+                                >
+                                    <img
+                                        src="/assets/images/index/recommend-1.png"
+                                        class="card-img h-100 object-fit-cover"
+                                        alt="recommend-1"
+                                    />
+                                    <div
+                                        class="card-img-overlay p-md-16 d-flex flex-column justify-content-end"
+                                    >
+                                        <div class="text-white">
+                                            <h3 class="fs-5 fs-md-3 mb-4">
+                                                日本深度賞櫻計畫
+                                            </h3>
+                                            <p class="fs-9 fs-md-8">
+                                                春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。
+                                            </p>
+                                        </div>
+                                        <a
+                                            href="product.html"
+                                            class="btn btn-natural-0 px-10 ps-10 pe-12 border-0 rounded-pill mt-12 d-flex justify-content-between align-items-center gap-4"
+                                            >訂購行程<span
+                                                class="material-icons-outlined"
+                                            >
+                                                arrow_forward
+                                            </span></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="card recommend-card text-bg-dark rounded-4 rounded-md-5 overflow-hidden h-100"
+                                >
+                                    <img
+                                        src="/assets/images/index/recommend-2.png"
+                                        class="card-img h-100 object-fit-cover"
+                                        alt="recommend-1"
+                                    />
+                                    <div
+                                        class="card-img-overlay p-md-16 d-flex flex-column justify-content-end"
+                                    >
+                                        <div class="text-white">
+                                            <h3 class="fs-5 fs-md-3 mb-4">
+                                                紐西蘭雪山探險
+                                            </h3>
+                                            <p class="fs-9 fs-md-8">
+                                                探索南島壯麗的自然風光，體驗各種極限運動和戶外活動。
+                                            </p>
+                                        </div>
+                                        <a
+                                            href="product.html"
+                                            class="btn btn-natural-0 px-10 ps-10 pe-12 border-0 rounded-pill mt-12 d-flex justify-content-between align-items-center gap-4"
+                                            >訂購行程<span
+                                                class="material-icons-outlined"
+                                            >
+                                                arrow_forward
+                                            </span></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="card recommend-card text-bg-dark rounded-4 rounded-md-5 overflow-hidden h-100"
+                                >
+                                    <img
+                                        src="/assets/images/index/recommend-3.png"
+                                        class="card-img h-100 object-fit-cover"
+                                        alt="recommend-1"
+                                    />
+                                    <div
+                                        class="card-img-overlay p-md-16 d-flex flex-column justify-content-end"
+                                    >
+                                        <div class="text-white">
+                                            <h3 class="fs-5 fs-md-3 mb-4">
+                                                摩洛哥迷幻之旅
+                                            </h3>
+                                            <p class="fs-9 fs-md-8">
+                                                漫步沙漠與古城之間，探索千年文化與色彩繽紛的市集風情。
+                                            </p>
+                                        </div>
+                                        <a
+                                            href="product.html"
+                                            class="btn btn-natural-0 px-10 ps-10 pe-12 border-0 rounded-pill mt-12 d-flex justify-content-between align-items-center gap-4"
+                                            >訂購行程<span
+                                                class="material-icons-outlined"
+                                            >
+                                                arrow_forward
+                                            </span></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- pagination -->
+                        <div
+                            class="recommend-pagination text-center mt-20 d-xl-none"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ZOBAA! 踏上旅程的第一站 (簡介) -->
+        <section class="intro py-20 py-md-60">
+            <div class="container">
+                <div
+                    class="row flex-lg-row-reverse justify-content-between align-items-center"
+                >
+                    <!-- 簡介-標題 -->
+                    <div
+                        class="col-lg-5 col-xl-4 mb-20 mb-lg-0 d-flex justify-content-lg-end"
+                    >
+                        <div>
+                            <h3
+                                class="text-primary fs-4 fs-md-2 fs-xxl-1 mb-12"
+                            >
+                                ZOBAA!<br />
+                                踏上旅程的<br />
+                                第一站
+                            </h3>
+                            <p
+                                class="text-primary-60 fw-bold fs-9 fs-md-7 lh-md-sm"
+                            >
+                                探索最熱門的旅遊主題，<br />
+                                從旅人必備攻略到獨家優惠，<br />
+                                全都為你精挑細選。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 簡介-內容 -->
+                    <div class="col-lg-7 col-xl-6">
+                        <div class="row">
+                            <div class="col-lg-6 mb-8 mb-lg-10">
+                                <div class="card border rounded-2 rounded-md-4">
+                                    <img
+                                        src="/assets/images/index/intro-1.png"
+                                        class="card-img-top"
+                                        alt="intro-1"
+                                    />
+                                    <div class="card-body p-12">
+                                        <h4 class="text-black fs-7 mb-4">
+                                            ZOBAA 專屬推薦行程
+                                        </h4>
+                                        <p>嚴選深度行程，豐富旅行靈感</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-8 mb-lg-10">
+                                <div class="card border rounded-2 rounded-md-4">
+                                    <img
+                                        src="/assets/images/index/intro-2.png"
+                                        class="card-img-top"
+                                        alt="intro-2"
+                                    />
+                                    <div class="card-body p-12">
+                                        <h4 class="text-black fs-7 mb-4">
+                                            ZOBAA 專屬推薦行程
+                                        </h4>
+                                        <p>嚴選深度行程，豐富旅行靈感</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row offset-row">
+                            <div
+                                class="col-lg-6 mb-8 mb-lg-0 position-relative"
+                            >
+                                <img
+                                    src="/assets/images/index/deco-text.svg"
+                                    alt="deco-text"
+                                    class="deco-text"
+                                />
+                                <div class="card border rounded-2 rounded-md-4">
+                                    <img
+                                        src="/assets/images/index/intro-3.png"
+                                        class="card-img-top"
+                                        alt="intro-3"
+                                    />
+                                    <div class="card-body p-12">
+                                        <h4 class="text-black fs-7 mb-4">
+                                            ZOBAA 專屬推薦行程
+                                        </h4>
+                                        <p>嚴選深度行程，豐富旅行靈感</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border rounded-2 rounded-md-4">
+                                    <img
+                                        src="/assets/images/index/intro-4.png"
+                                        class="card-img-top"
+                                        alt="intro-4"
+                                    />
+                                    <div class="card-body p-12">
+                                        <h4 class="text-black fs-7 mb-4">
+                                            ZOBAA 專屬推薦行程
+                                        </h4>
+                                        <p>嚴選深度行程，豐富旅行靈感</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 對角線背景 -->
+        <div class="diagonal"></div>
+
+        <!-- 今年旅行的靈感地圖 (景點) -->
+        <section
+            class="attraction bg-primary-10 py-20 py-md-60 overflow-hidden"
+        >
+            <div class="container">
+                <!-- 景點-標題 -->
+                <div
+                    class="row justify-content-between align-items-center mb-20 mb-md-40"
+                >
+                    <div
+                        class="col-12 col-lg-6 col-xl-5 col-xxl-5 mb-12 mb-lg-0"
+                    >
+                        <div class="mb-12 position-relative">
+                            <img
+                                src="/assets/images/index/deco-text-1.svg"
+                                alt="deco-text-1"
+                                class="attraction-deco"
+                            />
+                            <h3
+                                class="text-primary fs-4 fs-md-2 fs-xl-1 d-inline-block"
+                            >
+                                今年旅行的<br />
+                                靈感地圖
+                            </h3>
+                        </div>
+                        <!-- 頁籤tab-輪播 -->
+                        <div>
+                            <div class="tag-swiper">
+                                <ul
+                                    class="swiper-wrapper nav nav-pills flex-nowrap"
+                                    role="tablist"
+                                >
+                                    <li
+                                        class="swiper-slide w-auto"
+                                        role="presentation"
+                                    >
+                                        <button
+                                            class="nav-link fw-bold rounded-1 active"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#tab-all"
+                                            type="button"
+                                            role="tab"
+                                            aria-selected="true"
+                                        >
+                                            全部
+                                        </button>
+                                    </li>
+                                    <li
+                                        class="swiper-slide w-auto"
+                                        role="presentation"
+                                    >
+                                        <button
+                                            class="nav-link fw-bold rounded-1"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#tab-asia"
+                                            type="button"
+                                            role="tab"
+                                        >
+                                            亞洲
+                                        </button>
+                                    </li>
+                                    <li
+                                        class="swiper-slide w-auto"
+                                        role="presentation"
+                                    >
+                                        <button
+                                            class="nav-link fw-bold rounded-1"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#tab-eu"
+                                            type="button"
+                                            role="tab"
+                                        >
+                                            歐洲
+                                        </button>
+                                    </li>
+                                    <li
+                                        class="swiper-slide w-auto"
+                                        role="presentation"
+                                    >
+                                        <button
+                                            class="nav-link fw-bold rounded-1"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#tab-us"
+                                            type="button"
+                                            role="tab"
+                                        >
+                                            美洲
+                                        </button>
+                                    </li>
+                                    <li
+                                        class="swiper-slide w-auto"
+                                        role="presentation"
+                                    >
+                                        <button
+                                            class="nav-link fw-bold rounded-1"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#tab-oce"
+                                            type="button"
+                                            role="tab"
+                                        >
+                                            大洋洲
+                                        </button>
+                                    </li>
+                                    <li
+                                        class="swiper-slide w-auto"
+                                        role="presentation"
+                                    >
+                                        <button
+                                            class="nav-link fw-bold rounded-1"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#tab-af"
+                                            type="button"
+                                            role="tab"
+                                        >
+                                            非洲
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-6 col-xxl-5">
+                        <div>
+                            <div class="d-flex justify-content-lg-end">
+                                <p
+                                    class="text-primary fw-bold fs-9 fs-md-8 fs-xl-7"
+                                >
+                                    來自旅人搜尋、收藏與討論最多的目的地排行榜，<br />
+                                    一場風格與故事感兼具的靈感旅行，就從這裡開始。
+                                </p>
+                            </div>
+                            <div
+                                class="d-flex justify-content-end gap-4 mt-12 d-none d-lg-flex"
+                            >
+                                <!-- navigation buttons 左右導航箭頭 -->
+                                <button
+                                    type="button"
+                                    class="attraction-button-prev btn bg-white p-8 border-0"
+                                >
+                                    <span
+                                        class="material-icons-outlined align-bottom text-primary"
+                                    >
+                                        arrow_back
+                                    </span>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="attraction-button-next btn bg-white p-8 border-0"
+                                >
+                                    <span
+                                        class="material-icons-outlined align-bottom text-primary"
+                                    >
+                                        arrow_forward
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 頁籤tab內容-輪播 -->
+                <div class="tab-content mt-3">
+                    <div
+                        class="tab-pane fade show active"
+                        id="tab-all"
+                        role="tabpanel"
+                    >
+                        <!-- Swiper 主容器 -->
+                        <div class="attraction-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 多個 Slides -->
+                                <div class="swiper-slide">
+                                    <div
+                                        class="card rounded-4 rounded-md-5 position-relative"
+                                    >
+                                        <span
+                                            class="attraction-num text-primary-20 lh-sm"
+                                            >1</span
+                                        >
+                                        <div
+                                            class="card-body d-flex flex-column flex-md-row gap-4 gap-md-16"
+                                        >
+                                            <!-- 景點圖片 -->
+                                            <div
+                                                class="attraction-img rounded-2 overflow-hidden"
+                                            >
+                                                <img
+                                                    src="/assets/images/index/map-1.png"
+                                                    alt="map-1"
+                                                />
+                                            </div>
+                                            <!-- 景點卡片內容 -->
+                                            <div class="d-flex flex-column">
+                                                <div class="mb-12 mb-md-20">
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fs-9 fs-md-8 bg-tint py-4 px-8"
+                                                            >亞洲</span
+                                                        >
+                                                        <span
+                                                            class="badge bg-tint py-4 px-8"
+                                                            >日本京都</span
+                                                        >
+                                                    </div>
+                                                    <h4
+                                                        class="text-black fs-4 fs-md-3 fs-xl-2 mb-4"
+                                                    >
+                                                        走進四季交織的文化時光
+                                                    </h4>
+                                                    <p
+                                                        class="fs-9 fs-md-8 mb-12 mb-md-20"
+                                                    >
+                                                        穿過紅葉與古寺的交錯，感受從櫻花盛開到秋楓染紅的日式浪漫。
+                                                    </p>
+                                                    <div
+                                                        class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-4 gap-md-6"
+                                                    >
+                                                        <span
+                                                            class="badge bg-tint p-4"
+                                                            >ZOBAA 建議</span
+                                                        >
+                                                        <p
+                                                            class="text-primary fs-9 fs-md-8"
+                                                        >
+                                                            賞楓最佳時間是 11
+                                                            月中旬，推薦清水寺和南禪寺一帶
+                                                            🍁
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- 景點卡片 CTA -->
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-natural-100 px-10 py-8 rounded-pill mt-auto d-flex justify-content-between align-items-center gap-4 fs-9 fs-md-8"
+                                                    >立即探索魅力古都<span
+                                                        class="bg-white p-2 rounded-circle"
+                                                        ><span
+                                                            class="material-icons-outlined align-bottom text-black"
+                                                        >
+                                                            arrow_forward
+                                                        </span></span
+                                                    ></a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card rounded-4 rounded-md-5">
+                                        <span
+                                            class="attraction-num text-primary-20 lh-sm"
+                                            >2</span
+                                        >
+                                        <div
+                                            class="card-body d-flex flex-column flex-md-row gap-4 gap-md-16"
+                                        >
+                                            <!-- 景點圖片 -->
+                                            <div
+                                                class="attraction-img rounded-2 overflow-hidden"
+                                            >
+                                                <img
+                                                    src="/assets/images/index/map-2.png"
+                                                    alt="map-2"
+                                                />
+                                            </div>
+                                            <!-- 景點卡片內容 -->
+                                            <div class="d-flex flex-column">
+                                                <div class="mb-12 mb-md-20">
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fs-9 fs-md-8 bg-tint py-4 px-8"
+                                                            >亞洲</span
+                                                        >
+                                                        <span
+                                                            class="badge bg-tint py-4 px-8"
+                                                            >南韓首爾</span
+                                                        >
+                                                    </div>
+                                                    <h4
+                                                        class="text-black fs-4 fs-md-3 fs-xl-2 mb-4"
+                                                    >
+                                                        從街邊美食到韓劇場景
+                                                    </h4>
+                                                    <p
+                                                        class="fs-9 fs-md-8 mb-12 mb-md-20"
+                                                    >
+                                                        白天在弘大小巷探店，夜晚登上南山塔俯瞰整座城市的閃爍。
+                                                    </p>
+                                                    <div
+                                                        class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-4 gap-md-6"
+                                                    >
+                                                        <span
+                                                            class="badge bg-tint p-4"
+                                                            >ZOBAA 建議</span
+                                                        >
+                                                        <p
+                                                            class="text-primary fs-9 fs-md-8"
+                                                        >
+                                                            弘大周邊週五傍晚最熱鬧，小吃與街頭藝人齊發✨
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- 景點卡片 CTA -->
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-natural-100 px-10 py-8 rounded-pill mt-auto d-flex justify-content-between align-items-center gap-4 fs-9 fs-md-8"
+                                                    >感受韓系風格日常<span
+                                                        class="bg-white p-2 rounded-circle"
+                                                        ><span
+                                                            class="material-icons-outlined align-bottom text-black"
+                                                        >
+                                                            arrow_forward
+                                                        </span></span
+                                                    ></a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card rounded-4 rounded-md-5">
+                                        <span
+                                            class="attraction-num text-primary-20 lh-sm"
+                                            >3</span
+                                        >
+                                        <div
+                                            class="card-body d-flex flex-column flex-md-row gap-4 gap-md-16"
+                                        >
+                                            <!-- 景點圖片 -->
+                                            <div
+                                                class="attraction-img rounded-2 overflow-hidden"
+                                            >
+                                                <img
+                                                    src="/assets/images/index/map-3.png"
+                                                    alt="map-3"
+                                                />
+                                            </div>
+                                            <!-- 景點卡片內容 -->
+                                            <div class="d-flex flex-column">
+                                                <div class="mb-12 mb-md-20">
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fs-9 fs-md-8 bg-tint py-4 px-8"
+                                                            >歐洲</span
+                                                        >
+                                                        <span
+                                                            class="badge bg-tint py-4 px-8"
+                                                            >法國巴黎</span
+                                                        >
+                                                    </div>
+                                                    <h4
+                                                        class="text-black fs-4 fs-md-3 fs-xl-2 mb-4"
+                                                    >
+                                                        在藝術與咖啡香中迷路
+                                                    </h4>
+                                                    <p
+                                                        class="fs-9 fs-md-8 mb-12 mb-md-20"
+                                                    >
+                                                        穿梭左岸書店與畫廊，任由麵包香與建築細節擁抱你的步伐。
+                                                    </p>
+                                                    <div
+                                                        class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-4 gap-md-6"
+                                                    >
+                                                        <span
+                                                            class="badge bg-tint p-4"
+                                                            >ZOBAA 建議</span
+                                                        >
+                                                        <p
+                                                            class="text-primary fs-9 fs-md-8"
+                                                        >
+                                                            走進瑪黑區，最容易與巴黎風格不期而遇
+                                                            ☕️
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- 景點卡片 CTA -->
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-natural-100 px-10 py-8 rounded-pill mt-auto d-flex justify-content-between align-items-center gap-4 fs-9 fs-md-8"
+                                                    >開啟我的巴黎報險<span
+                                                        class="bg-white p-2 rounded-circle"
+                                                        ><span
+                                                            class="material-icons-outlined align-bottom text-black"
+                                                        >
+                                                            arrow_forward
+                                                        </span></span
+                                                    ></a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card rounded-4 rounded-md-5">
+                                        <span
+                                            class="attraction-num text-primary-20 lh-sm"
+                                            >4</span
+                                        >
+                                        <div
+                                            class="card-body d-flex flex-column flex-md-row gap-4 gap-md-16"
+                                        >
+                                            <!-- 景點圖片 -->
+                                            <div
+                                                class="attraction-img rounded-2 overflow-hidden"
+                                            >
+                                                <img
+                                                    src="/assets/images/index/map-4.png"
+                                                    alt="map-4"
+                                                />
+                                            </div>
+                                            <!-- 景點卡片內容 -->
+                                            <div class="d-flex flex-column">
+                                                <div class="mb-12 mb-md-20">
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fs-9 fs-md-8 bg-tint py-4 px-8"
+                                                            >大洋洲</span
+                                                        >
+                                                        <span
+                                                            class="badge bg-tint py-4 px-8"
+                                                            >澳洲雪梨</span
+                                                        >
+                                                    </div>
+                                                    <h4
+                                                        class="text-black fs-4 fs-md-3 fs-xl-2 mb-4"
+                                                    >
+                                                        城市與大自然的交會
+                                                    </h4>
+                                                    <p
+                                                        class="fs-9 fs-md-8 mb-12 mb-md-20"
+                                                    >
+                                                        清晨在海灘做瑜珈，午後漫步歌劇院，享受城市的節奏與野性的呼喚。
+                                                    </p>
+                                                    <div
+                                                        class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-4 gap-md-6"
+                                                    >
+                                                        <span
+                                                            class="badge bg-tint p-4"
+                                                            >ZOBAA 建議</span
+                                                        >
+                                                        <p
+                                                            class="text-primary fs-9 fs-md-8"
+                                                        >
+                                                            別錯過傍晚在雪梨港看日落＋欣賞歌劇院夜燈
+                                                            ✨
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- 景點卡片 CTA -->
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-natural-100 px-10 py-8 rounded-pill mt-auto d-flex justify-content-between align-items-center gap-4 fs-9 fs-md-8"
+                                                    >現在就飛向南半球<span
+                                                        class="bg-white p-2 rounded-circle"
+                                                        ><span
+                                                            class="material-icons-outlined align-bottom text-black"
+                                                        >
+                                                            arrow_forward
+                                                        </span></span
+                                                    ></a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card rounded-4 rounded-md-5">
+                                        <span
+                                            class="attraction-num text-primary-20 lh-sm"
+                                            >5</span
+                                        >
+                                        <div
+                                            class="card-body d-flex flex-column flex-md-row gap-4 gap-md-16"
+                                        >
+                                            <!-- 景點圖片 -->
+                                            <div
+                                                class="attraction-img rounded-2 overflow-hidden"
+                                            >
+                                                <img
+                                                    src="/assets/images/index/map-5.png"
+                                                    alt="map-5"
+                                                />
+                                            </div>
+                                            <!-- 景點卡片內容 -->
+                                            <div class="d-flex flex-column">
+                                                <div class="mb-12 mb-md-20">
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fs-9 fs-md-8 bg-tint py-4 px-8"
+                                                            >非洲</span
+                                                        >
+                                                        <span
+                                                            class="badge bg-tint py-4 px-8"
+                                                            >埃及開羅</span
+                                                        >
+                                                    </div>
+                                                    <h4
+                                                        class="text-black fs-4 fs-md-3 fs-xl-2 mb-4"
+                                                    >
+                                                        穿越千年時光的沙漠冒險
+                                                    </h4>
+                                                    <p
+                                                        class="fs-9 fs-md-8 mb-12 mb-md-20"
+                                                    >
+                                                        乘著駱駝走過古老遺跡，抬頭仰望太陽神的光芒，在歷史與傳說之間迷失。
+                                                    </p>
+                                                    <div
+                                                        class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-4 gap-md-6"
+                                                    >
+                                                        <span
+                                                            class="badge bg-tint p-4"
+                                                            >ZOBAA 建議</span
+                                                        >
+                                                        <p
+                                                            class="text-primary fs-9 fs-md-8"
+                                                        >
+                                                            建議早上 8
+                                                            點前到吉薩金字塔，避開人潮與烈日
+                                                            ☀️
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- 景點卡片 CTA -->
+                                                <a
+                                                    href="#"
+                                                    class="btn btn-natural-100 px-10 py-8 rounded-pill mt-auto d-flex justify-content-between align-items-center gap-4 fs-9 fs-md-8"
+                                                    >揭開古文明的面紗<span
+                                                        class="bg-white p-2 rounded-circle"
+                                                        ><span
+                                                            class="material-icons-outlined align-bottom text-black"
+                                                        >
+                                                            arrow_forward
+                                                        </span></span
+                                                    ></a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pagination -->
+                            <div
+                                class="attraction-pagination text-center mt-20 d-lg-none"
+                            ></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-asia" role="tabpanel">
+                        敬請期待~
+                    </div>
+                    <div class="tab-pane fade" id="tab-eu" role="tabpanel">
+                        敬請期待~
+                    </div>
+                    <div class="tab-pane fade" id="tab-us" role="tabpanel">
+                        敬請期待~
+                    </div>
+                    <div class="tab-pane fade" id="tab-oce" role="tabpanel">
+                        敬請期待~
+                    </div>
+                    <div class="tab-pane fade" id="tab-af" role="tabpanel">
+                        敬請期待~
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 對角線背景2 -->
+        <div class="diagonal-2"></div>
+
+        <!-- 行程 -->
+        <section class="py-20 py-md-60 overflow-hidden">
+            <div class="container">
+                <!-- 行程-標題 -->
+                <div class="mb-20 mb-md-40 position-relative">
+                    <img
+                        src="/assets/images/deco.svg"
+                        alt="bg-#"
+                        class="journey-deco"
+                    />
+                    <h3
+                        class="text-primary fs-4 fs-md-2 fs-lg-1 position-relative z-2"
+                    >
+                        搜尋墨爾本嗎？<br />
+                        來點行程參考！
+                    </h3>
+                </div>
+                <!-- 行程-輪播 -->
+                <div
+                    class="journey-swiper-wrapper custom-swiper-wrapper position-relative"
+                >
+                    <!-- Swiper 主容器 -->
+                    <div class="journey-swiper custom-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- 多個 Slides -->
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/index/journey-1.png"
+                                            class="card-img-top"
+                                            alt="journey-1"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                【獨家優惠】布萊頓彩色小屋＋森林蒸汽火車一日遊
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >即買即用</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >5 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.2</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(333)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    500+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 4,220
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 5,220
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/index/journey-2.png"
+                                            class="card-img-top"
+                                            alt="journey-2"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                無尾熊動物園＋企鵝歸巢雙享之旅
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >即買即用</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >7 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.2</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(333)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    500+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 3,890
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 4,920
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/index/journey-3.png"
+                                            class="card-img-top"
+                                            alt="journey-3"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                大洋路經典一日遊｜中文導覽！體驗澳洲最夢幻的海岸線
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >中文導覽</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >5 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.2</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(333)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    500+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 3,690
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 4,500
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/index/journey-4.png"
+                                            class="card-img-top"
+                                            alt="journey-4"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                墨爾本市區導覽｜壁畫巷＋隱藏咖啡廳之旅，體驗本地咖啡文化、隱藏小巷拍照
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >專業導覽</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >3 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.2</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(333)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    500+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$1,280
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 2,480
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/index/journey-1.png"
+                                            class="card-img-top"
+                                            alt="journey-1"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                【獨家優惠】布萊頓彩色小屋＋森林蒸汽火車一日遊
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >即買即用</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >5 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.2</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(333)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    500+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 4,220
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 5,220
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        type="button"
+                        class="journey-button-prev custom-button-prev btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                    >
+                        <span
+                            class="material-icons-outlined align-bottom text-primary"
+                        >
+                            arrow_back
+                        </span>
+                    </button>
+                    <button
+                        type="button"
+                        class="journey-button-next custom-button-next btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                    >
+                        <span
+                            class="material-icons-outlined align-bottom text-primary"
+                        >
+                            arrow_forward
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 跑馬燈 -->
+        <div class="marquee overflow-hidden">
+            <p class="text-primary-10">
+                # ZOBAA # WHERETOGO # TODAY # ZOBAA # WHERETOGO # TODAY
+            </p>
+        </div>
+
+        <!-- 為什麼選擇 ZOBAA ? -->
+        <section class="choose bg-primary-40 py-20 py-md-60">
+            <div class="container">
+                <!-- 圖片卡 -->
+                <div
+                    class="rounded-4 rounded-md-5 mb-4 mb-md-12 overflow-hidden"
+                >
+                    <img src="/assets/images/index/card.png" alt="choose-img" />
+                </div>
+                <!-- 內容卡片 -->
+                <div
+                    class="choose-card p-12 p-md-16 rounded-4 rounded-md-5 d-flex flex-column flex-lg-row justify-content-between gap-12 gap-xxl-70"
+                >
+                    <div
+                        class="d-flex flex-column align-items-start choose-title"
+                    >
+                        <h3
+                            class="text-primary fs-6 fs-md-3 fs-xl-2 mb-8 mb-md-12"
+                        >
+                            為什麼選擇 ZOBAA ?
+                        </h3>
+                        <p class="fs-9 fs-md-8 mb-lg-12">
+                            不只是帶你抵達目的地，更在每一次出發前，替你預想所有細節。<br />
+                            ZOBΛA 希望你能放心探索世界，把記憶留給旅程本身。
+                        </p>
+                        <a
+                            href="product.html"
+                            class="btn btn-natural-100 px-10 py-8 rounded-pill d-flex justify-content-between align-items-center gap-4 d-none d-lg-flex fs-9 fs-lg-7 lh-sm"
+                            >立即探索我們的精心旅程<span
+                                class="bg-white p-2 rounded-circle"
+                                ><span
+                                    class="material-icons-outlined align-bottom text-black"
+                                >
+                                    arrow_forward
+                                </span></span
+                            ></a
+                        >
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row gap-8 w-100">
+                        <div class="card w-100">
+                            <div
+                                class="card-body p-12 p-xl-16 d-flex flex-column justify-content-center"
+                            >
+                                <h4 class="text-primary fs-4 fs-xl-2 mb-4 me-4">
+                                    8 年<span
+                                        class="material-icons-outlined fs-xl-4 metric-plus"
+                                    >
+                                        add
+                                    </span>
+                                </h4>
+                                <p
+                                    class="text-primary-80 fw-bold fs-8 fs-xl-7 lh-lg-sm"
+                                >
+                                    旅遊企劃經驗
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card w-100">
+                            <div
+                                class="card-body p-12 p-xl-16 d-flex flex-column justify-content-center"
+                            >
+                                <h4 class="text-primary fs-4 fs-xl-2 mb-4 me-4">
+                                    30,000<span
+                                        class="material-icons-outlined fs-xl-4 metric-plus"
+                                    >
+                                        add
+                                    </span>
+                                </h4>
+                                <p
+                                    class="text-primary-80 fw-bold fs-8 fs-xl-7 lh-lg-sm"
+                                >
+                                    旅人五星好評
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a
+                        href="product.html"
+                        class="btn btn-natural-100 px-10 py-8 rounded-pill d-flex justify-content-between align-items-center gap-4 d-lg-none fs-9 fs-lg-7"
+                        >立即探索我們的精心旅程<span
+                            class="bg-white p-2 rounded-circle"
+                            ><span
+                                class="material-icons-outlined align-bottom text-black"
+                            >
+                                arrow_forward
+                            </span></span
+                        ></a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- 頁尾 -->
+        <%- include('./layout/footer'); -%>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>

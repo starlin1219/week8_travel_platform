@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/assets/images/favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <title>登入 | ZOBAA! 旅遊網站</title>
+    </head>
+    <body>
+        <main>
+            <div class="d-flex">
+                <!-- 輪播圖片 -->
+                <div class="login-swiper-wrapper py-20 ps-20 d-none d-lg-block">
+                    <!-- Swiper 主容器 -->
+                    <div class="login-swiper overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <!-- 多個 Slides -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="/assets/images/login/cover-1.png"
+                                    alt="cover-1"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="/assets/images/login/cover-2.png"
+                                    alt="cover-2"
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="/assets/images/login/cover-3.png"
+                                    alt="cover-3"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 主要內容 -->
+                <div
+                    class="d-flex flex-column justify-content-center align-items-center px-12 pt-30 pt-lg-0 w-100"
+                >
+                    <div class="login-content d-flex flex-column w-100">
+                        <h1 class="text-black fs-4 fs-md-2 mb-12 mb-md-20">
+                            歡迎回來！
+                        </h1>
+                        <!-- 第三方登入 -->
+                        <div class="mb-12 mb-md-20">
+                            <a
+                                href="#"
+                                class="btn btn-outline-natural-40 d-flex ps-8 mb-4 mb-md-8"
+                            >
+                                <img
+                                    src="/assets/images/login/ic_google.svg"
+                                    alt="ic_google"
+                                /><span
+                                    class="text-natural-80 fw-normal flex-grow-1"
+                                    >使用 Google 帳號登入</span
+                                >
+                            </a>
+                            <a
+                                href="#"
+                                class="btn btn-outline-natural-40 d-flex ps-8 mb-4 mb-md-8"
+                            >
+                                <img
+                                    src="/assets/images/login/ic_facebook.svg"
+                                    alt="ic_facebook"
+                                /><span
+                                    class="text-natural-80 fw-normal flex-grow-1"
+                                    >使用 Facebook 帳號登入</span
+                                >
+                            </a>
+                            <a
+                                href="#"
+                                class="btn btn-outline-natural-40 d-flex ps-8"
+                            >
+                                <img
+                                    src="/assets/images/login/ic_apple.svg"
+                                    alt="ic_apple"
+                                /><span
+                                    class="text-natural-80 fw-normal flex-grow-1"
+                                    >使用 Apple 帳號登入</span
+                                >
+                            </a>
+                        </div>
+                        <!-- 登入表單 -->
+                        <form
+                            action="/"
+                            method="get"
+                            class="needs-validation mb-12 mb-md-20"
+                            novalidate
+                        >
+                            <h2 class="text-black fs-8 lh-base mb-8">
+                                或使用 ZOBAA 帳號登入
+                            </h2>
+                            <!-- 信箱 -->
+                            <div class="mb-8">
+                                <label for="login-email" class="form-label"
+                                    >電子信箱<span class="text-alert ms-2"
+                                        >*</span
+                                    ></label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="login-email"
+                                    name="email"
+                                    placeholder="請輸入電子信箱"
+                                    required
+                                />
+                                <div class="invalid-feedback">
+                                    請輸入正確的電子信箱
+                                </div>
+                            </div>
+                            <!-- 密碼 -->
+                            <div class="mb-4">
+                                <label for="login-password" class="form-label"
+                                    >密碼<span class="text-alert ms-2"
+                                        >*</span
+                                    ></label
+                                >
+                                <div class="position-relative password-input">
+                                    <input
+                                        type="password"
+                                        class="form-control pe-18"
+                                        id="login-password"
+                                        name="password"
+                                        placeholder="請輸入密碼"
+                                        required
+                                    />
+                                    <span class="password-toggle">
+                                        <img
+                                            src="/assets/images/login/ic_eye_close.svg"
+                                            alt="密碼隱藏"
+                                            class="eye-close d-block"
+                                        />
+                                        <img
+                                            src="/assets/images/login/ic_eye-open.svg"
+                                            alt="密碼顯示"
+                                            class="eye-open d-none"
+                                        />
+                                    </span>
+                                </div>
+                                <div class="invalid-feedback">請輸入密碼</div>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between mb-12 mb-md-20"
+                            >
+                                <!-- 記住帳號 -->
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="true"
+                                        name="keep-account"
+                                        id="keep-account"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="keep-account"
+                                    >
+                                        記住帳號
+                                    </label>
+                                </div>
+                                <!-- 忘記密碼 -->
+                                <a href="#" class="link-natural-80"
+                                    >忘記密碼？</a
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-primary w-100"
+                                disabled
+                            >
+                                立即登入
+                            </button>
+                        </form>
+                        <!-- 立即註冊 -->
+                        <p>
+                            沒有 ZOBAA 帳號嗎？<a
+                                href="register.html"
+                                class="link-primary fw-bold ms-4 text-decoration-underline"
+                                >立即註冊</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>

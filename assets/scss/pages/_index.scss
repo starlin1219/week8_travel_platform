@@ -1,0 +1,393 @@
+// Hero 區塊
+.hero {
+    background: url(/assets/images/index/hero-bg.png) no-repeat center / cover;
+    min-height: 544px;
+    padding-bottom: 162px;
+
+    @include media-breakpoint-up(md) {
+        min-height: 1080px;
+        padding-bottom: 474px;
+    }
+}
+
+.hero-search {
+    max-width: 720px;
+}
+
+// 你的專屬推薦
+.recommend {
+    background-color: #221f1e;
+}
+.recommend-subtitle {
+    max-width: 415px;
+}
+
+.recommend-swiper {
+    .swiper-wrapper {
+        display: flex;
+    }
+    .swiper-slide {
+        width: 277px;
+        flex: 0 0 auto;
+        transition: width 0.5s ease, flex-basis 0.5s ease;
+        @include media-breakpoint-up(md) {
+            width: 416px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .swiper-wrapper {
+            gap: 24px;
+        } // XL 用 gap 取代 spaceBetween
+        .swiper-slide {
+            width: auto;
+            flex: 0 0 calc((100% - 3 * 24px) / 4);
+            height: 600px;
+            position: relative;
+            a {
+                position: absolute;
+                left: 32px; // overlay 內距調整
+                right: 32px;
+                bottom: 32px;
+                height: 0;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        // 有 hover 時：把其他三張一起縮到剩餘寬度
+        .swiper-wrapper:has(.swiper-slide:hover) .swiper-slide {
+            flex-basis: calc((100% - 416px - 3 * 24px) / 3);
+        }
+        .swiper-wrapper:has(.swiper-slide:hover) .swiper-slide:hover {
+            flex-basis: 416px;
+            a {
+                position: static;
+                height: auto;
+                opacity: 1;
+                pointer-events: auto;
+                transition: all 0.2s;
+            }
+        }
+    }
+
+    .recommend-card {
+        border-top: 1px solid rgba(245, 247, 249, 0.2);
+        border-bottom: 1px solid rgba(245, 247, 249, 0.2);
+        border-left: 1px solid rgba(245, 247, 249, 0.2);
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            img {
+                aspect-ratio: 416 / 600;
+            }
+        }
+        @media (max-width: 767px) {
+            img {
+                aspect-ratio: 277 / 400;
+            }
+        }
+    }
+
+    .card-img-overlay {
+        background: linear-gradient(#221f1e00 60%, #221f1e60);
+    }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0; // 覆蓋 Swiper 預設 margin
+}
+.recommend-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px; // 用 gap 控制圓點間距
+
+    // 基本圓點：白色小圓
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: $natural-40;
+        opacity: 1; // 覆蓋 Swiper 預設 .2
+        transition: width 0.25s ease, background-color 0.25s ease;
+    }
+
+    // 目前頁：膠囊形、品牌色
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        width: 24px; // 膠囊的長度
+        height: 8px;
+        background: $primary-40;
+    }
+}
+
+// ZOBAA! 踏上旅程的第一站
+.deco-text {
+    position: static;
+    display: none;
+}
+@include media-breakpoint-up(lg) {
+    .intro {
+        background: url(/assets/images/index/deco-bg.svg) no-repeat center /
+            contain;
+    }
+    .deco-text {
+        display: block;
+        position: absolute;
+        top: 49px;
+        left: -312px;
+        z-index: -1;
+    }
+    .offset-row {
+        transform: translateX(80px);
+    }
+}
+
+// 對角線背景
+.diagonal {
+    /* 手機預設值 */
+    --diag-h: 40px;
+    --diag-deg: -3.979deg;
+
+    position: relative;
+    height: var(--diag-h);
+    background-color: $primary-10;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: var(--diag-h); // 跟著變數動
+        background: $white;
+        transform-origin: left top;
+        transform: skewY(var(--diag-deg)); // 跟著變數動
+        will-change: transform; // 微優化繪製
+    }
+
+    // 斷點只改「變數」，其餘樣式不用重覆
+    @media (min-width: 576px) {
+        --diag-h: 50px;
+        --diag-deg: -3.73deg;
+    }
+    @media (min-width: 768px) {
+        --diag-h: 60px;
+        --diag-deg: -3.465deg;
+    }
+    @media (min-width: 992px) {
+        --diag-h: 70px;
+        --diag-deg: -3.341deg;
+    }
+    @media (min-width: 1200px) {
+        --diag-h: 80px;
+        --diag-deg: -2.386deg;
+    }
+}
+
+// 今年旅行的靈感地圖 (景點)
+.attraction-deco {
+    position: absolute;
+    left: 128px;
+    top: -48px;
+    width: clamp(8.125rem, 7.0562rem + 4.5603vw, 10.75rem);
+
+    @media (min-width: 768px) {
+        left: 208px;
+    }
+    @media (min-width: 1200px) {
+        left: 324px;
+    }
+}
+
+.attraction {
+    // 景點頁籤-pills
+    .nav-pills .nav-link,
+    .nav-pills .show > .nav-link {
+        color: $primary;
+        background-color: $white;
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+        color: $white;
+        background-color: $primary;
+    }
+}
+
+.attraction-swiper {
+    .swiper-slide {
+        width: 312px;
+    }
+    .attraction-num {
+        position: absolute;
+        top: 0;
+        left: 16px;
+        transform: translateY(-40%);
+        font-size: 100px;
+        font-family: "Poppins", sans-serif;
+        font-style: italic;
+    }
+    .attraction-img {
+        aspect-ratio: 280 / 200;
+    }
+
+    @include media-breakpoint-up(md) {
+        .swiper-slide {
+            width: 746px;
+        }
+        .attraction-num {
+            left: 32px;
+            font-size: 200px;
+        }
+        .attraction-img {
+            width: 300px;
+            flex-shrink: 0;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.attraction-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px; // 用 gap 控制圓點間距
+
+    // 基本圓點：白色小圓
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: $natural-0;
+        opacity: 1; // 覆蓋 Swiper 預設 .2
+        transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    // 目前頁：膠囊形、品牌色
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        width: 24px; // 膠囊的長度
+        height: 8px;
+        background: $primary;
+    }
+}
+
+// 對角線背景2
+.diagonal-2 {
+    // 手機預設值
+    --diag-h: 40px;
+    --diag-deg: -3.979deg;
+    position: relative;
+    height: var(--diag-h);
+    background-color: $primary-10;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: var(--diag-h); // 跟著變數同步
+        background: $white;
+        transform-origin: right top;
+        transform: skewY(var(--diag-deg)); // 跟著變數同步
+    }
+
+    @include media-breakpoint-up(sm) {
+        --diag-h: 50px;
+        --diag-deg: -3.73deg;
+    }
+    @include media-breakpoint-up(md) {
+        --diag-h: 60px;
+        --diag-deg: -3.465deg;
+    }
+    @include media-breakpoint-up(lg) {
+        --diag-h: 70px;
+        --diag-deg: -3.341deg;
+    }
+    @include media-breakpoint-up(xl) {
+        --diag-h: 80px;
+        --diag-deg: -2.386deg;
+    }
+}
+
+// 行程
+.journey-deco {
+    position: absolute;
+    left: -8px;
+    top: -20px;
+    width: 52px;
+    z-index: -1;
+    @include media-breakpoint-up(sm) {
+        left: -20px;
+        top: -20px;
+    }
+    @include media-breakpoint-up(md) {
+        left: -40px;
+        top: -40px;
+        width: 100px;
+    }
+    @include media-breakpoint-up(lg) {
+        left: -48px;
+        top: -48px;
+        width: 120px;
+    }
+}
+
+// 跑馬燈
+.marquee {
+    p {
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        line-height: 1.2;
+        font-size: clamp(2rem, -0.4939rem + 10.6406vw, 8.125rem);
+        white-space: nowrap;
+
+        animation: marquee 20s linear infinite alternate;
+        @keyframes marquee {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+
+// 為什麼選擇 ZOBAA ?
+.choose {
+    @include media-breakpoint-up(lg) {
+        background: url(/assets/images/index/bg-line.svg) no-repeat center 65% /
+                2000px auto,
+            // url(/assets/images/index/bg-up.svg) no-repeat left top / 800px,
+            url(/assets/images/index/bg-up.svg) no-repeat calc(0% - 240px)
+                calc(0% - 360px) / 800px,
+            url(/assets/images/index/bg-down.svg) no-repeat calc(100% - 40px)
+                calc(100% + 480px) / 720px;
+    }
+}
+
+.choose-card {
+    background-color: rgba($primary-10, 0.5);
+    backdrop-filter: blur(8px);
+
+    .choose-title {
+        flex-shrink: 0;
+        @include media-breakpoint-up(lg) {
+            flex-shrink: 0.1;
+        }
+        @include media-breakpoint-up(xl) {
+            flex-shrink: 0;
+        }
+    }
+
+    .metric-plus {
+        vertical-align: super;
+        font-weight: 900;
+    }
+}

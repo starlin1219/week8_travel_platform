@@ -1,0 +1,112 @@
+$utilities: map-merge(
+    $utilities,
+    (
+        "font-size":
+            map-merge(
+                map-get($utilities, "font-size"),
+                (
+                    responsive: true,
+                )
+            ),
+        "rounded":
+            map-merge(
+                map-get($utilities, "rounded"),
+                (
+                    responsive: true,
+                )
+            ),
+        "line-height":
+            map-merge(
+                map-get($utilities, "line-height"),
+                (
+                    responsive: true,
+                )
+            ),
+        "overflow":
+            map-merge(
+                map-get($utilities, "overflow"),
+                (
+                    responsive: true,
+                )
+            ),
+        "overflow-x":
+            map-merge(
+                map-get($utilities, "overflow-x"),
+                (
+                    responsive: true,
+                )
+            ),
+        "overflow-y":
+            map-merge(
+                map-get($utilities, "overflow-y"),
+                (
+                    responsive: true,
+                )
+            ),
+        // 邊框有無
+        "border":
+            map-merge(
+                map-get($utilities, "border"),
+                (
+                    responsive: true,
+                )
+            ),
+        "border-top":
+            map-merge(
+                map-get($utilities, "border-top"),
+                (
+                    responsive: true,
+                )
+            ),
+        "border-end":
+            map-merge(
+                map-get($utilities, "border-end"),
+                (
+                    responsive: true,
+                )
+            ),
+        "border-bottom":
+            map-merge(
+                map-get($utilities, "border-bottom"),
+                (
+                    responsive: true,
+                )
+            ),
+        "border-start":
+            map-merge(
+                map-get($utilities, "border-start"),
+                (
+                    responsive: true,
+                )
+            ),
+        // 邊框粗細
+        "border-width":
+            map-merge(
+                map-get($utilities, "border-width"),
+                (
+                    responsive: true,
+                )
+            ),
+        // 顏色/透明度響應式
+        // "border-color":  map-merge(map-get($utilities, "border-color"),  (responsive: true)),
+        // "border-opacity":map-merge(map-get($utilities, "border-opacity"),(responsive: true)),
+        "width":
+            map-merge(
+                map-get($utilities, "width"),
+                (
+                    responsive: true,
+                )
+            ),
+        "max-width":
+            map-merge(
+                map-get($utilities, "max-width"),
+                (
+                    responsive: true,
+                )
+            ),
+    )
+);
+
+.cursor-pointer {
+    cursor: pointer;
+}

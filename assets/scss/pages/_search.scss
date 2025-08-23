@@ -1,0 +1,106 @@
+// 地點簡介
+.large-img {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.small-img {
+    width: calc((100% - 8px) / 2);
+    max-width: 280px;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.search-swiper {
+    .search-pagination {
+        position: absolute;
+        left: 12px;
+        bottom: 12px;
+        z-index: 2;
+
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 4px; // 用 gap 控制圓點間距
+
+        // 基本圓點：白色小圓
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background: $white;
+            opacity: 1; // 覆蓋 Swiper 預設 .2
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        // 目前頁：膠囊形、品牌色
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            width: 24px; // 膠囊的長度
+            height: 8px;
+            background: $primary;
+        }
+    }
+    .more-btn {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        z-index: 2;
+    }
+
+    .search-img {
+        max-width: 696px;
+        aspect-ratio: 351 / 240;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// 熱門分類
+.category-card {
+    transition: box-shadow 0.3s;
+    &:hover {
+        box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+.category-img {
+    @include media-breakpoint-down(md) {
+        width: 64px;
+    }
+}
+
+// 旅人攻略
+.guide-card {
+    .guide-title {
+        color: $black;
+        transition: color 0.3s;
+    }
+    .guide-text {
+        transition: color 0.3s;
+    }
+
+    &:hover {
+        .guide-title {
+            color: $primary;
+        }
+        .guide-text {
+            color: $primary-60;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .guide-img {
+            width: 480px;
+            flex-shrink: 0;
+        }
+    }
+}

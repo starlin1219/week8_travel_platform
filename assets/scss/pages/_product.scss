@@ -1,0 +1,305 @@
+// 既有固定 Navbar
+.navbar.fixed-top {
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.navbar.fixed-top.is-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+// Page Nav（預設縮到上面，看不到)
+.pageNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    transform: translateY(-100%);
+    transition: transform 0.25s ease;
+}
+.pageNav.is-visible {
+    transform: translateY(0);
+}
+
+// active 樣式（Bootstrap ScrollSpy) 控制 active
+.pageNav .nav-link {
+    color: $natural-80;
+
+    &.active {
+        color: $primary;
+        font-weight: bold;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 32px;
+            height: 4px;
+            border-radius: 10px;
+            background-color: $primary;
+        }
+    }
+}
+
+// 商品簡介
+.intro-btn {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
+
+.product-swiper {
+    margin-right: -12px;
+    margin-left: -12px;
+    @include media-breakpoint-up(sm) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .product-pagination {
+        position: absolute;
+        left: 50%;
+        bottom: 24px;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px; // 用 gap 控制圓點間距
+
+        // 基本圓點：白色小圓
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background: $white;
+            opacity: 1; // 覆蓋 Swiper 預設 .2
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        // 目前頁：膠囊形、primary顏色
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            width: 24px; // 膠囊的長度
+            height: 8px;
+            background: $primary;
+        }
+    }
+
+    .product-img {
+        max-width: 696px;
+        aspect-ratio: 375 / 240;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// 選擇方案
+.option-toggle .option-expanded {
+    display: none;
+}
+.option-toggle[aria-expanded="true"] .option-collapsed {
+    display: none;
+}
+.option-toggle[aria-expanded="true"] .option-expanded {
+    display: inline;
+}
+
+.option-deco {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    @include media-breakpoint-up(md) {
+        bottom: 24px;
+    }
+}
+.option-img {
+    width: 200px;
+    height: 132px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.option-list-title {
+    width: 120px;
+}
+
+.option-num {
+    min-width: 60px;
+}
+//日曆樣式設定
+.air-datepicker {
+    font-size: 16px;
+    width: 100%;
+    border-radius: 20px;
+}
+.air-datepicker.-inline- {
+    border: 1px solid $natural-40;
+}
+.air-datepicker-nav {
+    padding: 12px 16px;
+    .air-datepicker-nav--title {
+        order: -1;
+        margin-right: auto;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.2;
+        color: $black;
+    }
+    .air-datepicker-nav--action {
+        width: 40px;
+        height: 40px;
+        &:hover {
+            background-color: $primary-10;
+        }
+    }
+}
+.air-datepicker--content {
+    padding: 16px;
+}
+.air-datepicker-cell {
+    width: 44px;
+    height: 44px;
+}
+.air-datepicker-body--day-name {
+    color: $natural-80;
+    width: 44px;
+    height: 44px;
+}
+.air-datepicker-body--day-names {
+    margin: 0 0 16px 0;
+}
+.air-datepicker-body--cells.-days- {
+    row-gap: 16px;
+}
+.air-datepicker-cell {
+    border-radius: 8px;
+}
+.air-datepicker-cell.-day-:not(.-disabled-) {
+    font-weight: bold;
+}
+.air-datepicker-cell.-disabled- {
+    text-decoration: line-through;
+    color: $natural-60;
+}
+.air-datepicker-cell.-current- {
+    color: $primary-60;
+    font-weight: bold;
+}
+.air-datepicker-cell.-selected- {
+    color: $black;
+    font-weight: bold;
+    background: $primary-10;
+}
+.air-datepicker-cell.-selected-.-current- {
+    color: $primary-60;
+    background: $primary-10;
+}
+.air-datepicker-cell.-selected-.-focus- {
+    background: $primary-10;
+}
+
+// 商品說明
+.expand-box {
+    .expand-content {
+        max-height: clamp(28.5rem, 11.3227rem + 73.2899vw, 70.6875rem);
+        overflow: hidden;
+        transition: max-height 0.3s;
+    }
+
+    .expand-fade {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: clamp(9.75rem, 7.2052rem + 10.8578vw, 16rem);
+        background: linear-gradient(
+            to bottom,
+            rgba(250, 251, 252, 0),
+            rgba(250, 251, 252, 1)
+        );
+        transition: opacity 0.3s;
+    }
+
+    .expand-toggle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 265px;
+        z-index: 1;
+        transition: position 0.3s;
+    }
+}
+// 展開狀態
+.expand-box.is-expanded {
+    .expand-content {
+        max-height: none;
+    }
+    .expand-fade {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .expand-toggle {
+        position: static;
+        transform: translateX(0);
+    }
+}
+// 切換按鈕
+.expand-toggle .label-expanded {
+    display: none;
+}
+.expand-box[open] .expand-toggle .label-collapsed {
+    display: none;
+}
+.expand-box[open] .expand-toggle .label-expanded {
+    display: inline;
+}
+
+// 旅人評論
+.comment-card {
+    box-shadow: 0 4px 40px 0 rgba($black, 0.1);
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .evaluation-value {
+        width: 96px;
+    }
+}
+
+// 側邊導覽頁籤
+.side-nav {
+    position: sticky;
+    top: 100px; // 距離視窗頂部 100px
+    .nav-link {
+        color: $natural-60;
+        &.active {
+            font-weight: bold;
+            color: $primary;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background-color: $primary;
+                border-radius: 10px;
+            }
+        }
+    }
+}

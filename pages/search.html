@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/assets/images/favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <title>地點搜尋 | ZOBAA! 旅遊網站</title>
+    </head>
+    <body
+        data-bs-spy="scroll"
+        data-bs-target="#pageNav"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+    >
+        <!-- 導覽列 -->
+        <%- include('./layout/header'); -%>
+
+        <!-- 地點簡介 -->
+        <section
+            class="bg-natural-10 pt-52 pt-md-56 pt-lg-85 pb-20 pb-md-40 overflow-hidden"
+        >
+            <!-- 麵包屑導覽 -->
+            <div class="container">
+                <nav aria-label="breadcrumb" class="mb-20 d-none d-lg-block">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item link-primary">
+                            <a href="#">首頁</a>
+                        </li>
+                        <li class="breadcrumb-item link-primary">
+                            <a href="#">日本</a>
+                        </li>
+                        <li class="breadcrumb-item link-primary">
+                            <a href="#">關西</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            大阪
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <!-- 地點簡介-標題+描述 -->
+            <div class="container">
+                <div class="mb-12">
+                    <h2 class="text-black fs-4 fs-md-2 mb-4">大阪</h2>
+                    <p class="fs-9 fs-md-8">
+                        大阪，一座融合傳統與現代的城市，擁有豐富的歷史文化、熱鬧的購物街區與世界知名的美食天堂。從氣派的大阪城到霓虹閃爍的道頓堀，每一處都充滿驚喜。無論是第一次造訪，還是再次回味，大阪總能用它的熱情與魅力，讓你留下難忘回憶。
+                    </p>
+                </div>
+            </div>
+            <!-- 地點簡介圖 -->
+            <div class="container">
+                <div
+                    class="rounded-lg-4 overflow-hidden position-relative d-none d-lg-block"
+                >
+                    <div class="d-flex gap-4">
+                        <div class="large-img">
+                            <img
+                                src="/assets/images/location/osaka-1.png"
+                                alt="osaka-1"
+                            />
+                        </div>
+                        <div class="d-flex flex-wrap gap-4">
+                            <div class="small-img">
+                                <img
+                                    src="/assets/images/location/osaka-2.png"
+                                    alt="osaka-2"
+                                />
+                            </div>
+                            <div class="small-img">
+                                <img
+                                    src="/assets/images/location/osaka-3.png"
+                                    alt="osaka-3"
+                                />
+                            </div>
+                            <div class="small-img">
+                                <img
+                                    src="/assets/images/location/osaka-4.png"
+                                    alt="osaka-4"
+                                />
+                            </div>
+                            <div class="small-img">
+                                <img
+                                    src="/assets/images/location/osaka-5.png"
+                                    alt="osaka-5"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-outline-primary intro-btn"
+                    >
+                        查看更多
+                    </button>
+                </div>
+            </div>
+            <!-- 地點簡介圖-輪播 -->
+            <div class="container">
+                <div class="search-swiper d-lg-none position-relative">
+                    <div class="swiper-wrapper position-relative z-0">
+                        <!-- 多個 Slides -->
+                        <div class="swiper-slide">
+                            <div class="search-img rounded-2 overflow-hidden">
+                                <img
+                                    src="/assets/images/location/osaka-1.png"
+                                    alt="osaka-1"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="search-img rounded-2 overflow-hidden">
+                                <img
+                                    src="/assets/images/location/osaka-2.png"
+                                    alt="osaka-2"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="search-img rounded-2 overflow-hidden">
+                                <img
+                                    src="/assets/images/location/osaka-3.png"
+                                    alt="osaka-3"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="search-img rounded-2 overflow-hidden">
+                                <img
+                                    src="/assets/images/location/osaka-4.png"
+                                    alt="osaka-4"
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="search-img rounded-2 overflow-hidden">
+                                <img
+                                    src="/assets/images/location/osaka-5.png"
+                                    alt="osaka-5"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pagination -->
+                    <div class="search-pagination"></div>
+                    <!-- more btn -->
+                    <a
+                        href="product.html"
+                        class="btn btn-outline-primary more-btn"
+                        >查看更多</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- 熱門分類 -->
+        <section class="py-20 py-40">
+            <div class="container">
+                <h2 class="text-primary fs-4 fs-md-2 mb-10 mb-md-20">
+                    想怎麼玩大阪？<br class="d-lg-none" />
+                    熱門分類快速選！
+                </h2>
+                <div class="row gy-8">
+                    <div class="col-6 col-lg-3 px-4 px-xl-6">
+                        <a
+                            href="#"
+                            class="category-card rounded-2 rounded-md-4 border overflow-hidden d-block"
+                        >
+                            <div class="bg-tint py-10 text-center">
+                                <img
+                                    src="/assets/images/location/category-1.svg"
+                                    alt="category-1"
+                                    class="category-img"
+                                />
+                            </div>
+                            <div class="p-8 p-md-12">
+                                <h3
+                                    class="text-black fs-8 fs-md-7 lh-md-sm mb-4"
+                                >
+                                    交通優惠
+                                </h3>
+                                <p class="fs-9 fs-md-8">20+ 種選擇</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 px-4 px-xl-6">
+                        <a
+                            href="#"
+                            class="category-card rounded-2 rounded-md-4 border overflow-hidden d-block"
+                        >
+                            <div class="bg-tint py-10 text-center">
+                                <img
+                                    src="/assets/images/location/category-2.svg"
+                                    alt="category-2"
+                                    class="category-img"
+                                />
+                            </div>
+                            <div class="p-8 p-md-12">
+                                <h3
+                                    class="text-black fs-8 fs-md-7 lh-md-sm mb-4"
+                                >
+                                    一日遊
+                                </h3>
+                                <p class="fs-9 fs-md-8">50+ 種選擇</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 px-4 px-xl-6">
+                        <a
+                            href="#"
+                            class="category-card rounded-2 rounded-md-4 border overflow-hidden d-block"
+                        >
+                            <div class="bg-tint py-10 text-center">
+                                <img
+                                    src="/assets/images/location/category-3.svg"
+                                    alt="category-3"
+                                    class="category-img"
+                                />
+                            </div>
+                            <div class="p-8 p-md-12">
+                                <h3
+                                    class="text-black fs-8 fs-md-7 lh-md-sm mb-4"
+                                >
+                                    景點門票
+                                </h3>
+                                <p class="fs-9 fs-md-8">70+ 種選擇</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 px-4 px-xl-6">
+                        <a
+                            href="#"
+                            class="category-card rounded-2 rounded-md-4 border overflow-hidden d-block"
+                        >
+                            <div class="bg-tint py-10 text-center">
+                                <img
+                                    src="/assets/images/location/category-4.svg"
+                                    alt="category-4"
+                                    class="category-img"
+                                />
+                            </div>
+                            <div class="p-8 p-md-12">
+                                <h3
+                                    class="text-black fs-8 fs-md-7 lh-md-sm mb-4"
+                                >
+                                    美食餐廳
+                                </h3>
+                                <p class="fs-9 fs-md-8">80+ 種選擇</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 大阪 TOP 10! -->
+        <section class="py-20 py-md-40 overflow-hidden">
+            <div class="container">
+                <!-- 排名-標題 -->
+                <h2 class="text-primary fs-4 fs-md-2 mb-10 mb-md-20">
+                    大阪 TOP 10!
+                </h2>
+                <!-- 排名-輪播 -->
+                <div
+                    class="ranking-swiper-wrapper custom-swiper-wrapper position-relative"
+                >
+                    <!-- Swiper 主容器 -->
+                    <div class="ranking-swiper custom-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- 多個 Slides -->
+                            <div class="swiper-slide">
+                                <div class="card bg-transparent">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/location/top-1.png"
+                                            class="card-img-top"
+                                            alt="ranking-1"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                環球影城超值一日遊｜哈利波特園區＋快速通關體驗
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >即買即用</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >5 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.8</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(1029)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    1000+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 5,480
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 6,200
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card bg-transparent">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/location/top-2.png"
+                                            class="card-img-top"
+                                            alt="ranking-2"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                奈良梅花鹿餵食體驗＋和服散策｜日式風情輕旅行
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >中文導覽</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >5 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.7</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(880)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    900+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 2,250
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 2,800
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card bg-transparent">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/location/top-3.png"
+                                            class="card-img-top"
+                                            alt="ranking-3"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                黑門市場美食巡禮｜在地職人帶路吃遍大阪經典小吃
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >專業導覽</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >5 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.6</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(540)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    700+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 1,580
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 2,500
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card bg-transparent">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/location/top-4.png"
+                                            class="card-img-top"
+                                            alt="ranking-4"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                大阪夜景直升機體驗｜空中俯瞰梅田摩天輪＋海遊館
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >即買即用</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >7 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.7</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(319)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    600+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$6,890
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 8,890
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card bg-transparent">
+                                    <div
+                                        class="overflow-hidden rounded-3 mb-8 position-relative"
+                                    >
+                                        <span
+                                            class="material-icons-outlined toggle-label text-white"
+                                        >
+                                            favorite_border
+                                        </span>
+                                        <img
+                                            src="/assets/images/location/top-1.png"
+                                            class="card-img-top"
+                                            alt="ranking-1"
+                                        />
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div>
+                                            <h4
+                                                class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                            >
+                                                環球影城超值一日遊｜哈利波特園區＋快速通關體驗
+                                            </h4>
+                                            <div class="d-flex gap-4 mb-4">
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >即買即用</span
+                                                >
+                                                <span
+                                                    class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                    >5 天前可免費取消</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="d-flex pb-8 border-bottom mb-8"
+                                            >
+                                                <div
+                                                    class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                >
+                                                    <span
+                                                        class="material-icons-outlined text-warning fs-10"
+                                                    >
+                                                        star
+                                                    </span>
+                                                    <span class="fs-9"
+                                                        >4.8</span
+                                                    >
+                                                    <span
+                                                        class="text-natural-60 fs-9"
+                                                        >(1029)</span
+                                                    >
+                                                </div>
+                                                <div class="fs-9">
+                                                    1000+ 個已訂購
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="text-primary fs-7">
+                                                    NT$ 5,480
+                                                </h5>
+                                                <p
+                                                    class="text-natural-70 fs-9 text-decoration-line-through"
+                                                >
+                                                    NT$ 6,200
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        type="button"
+                        class="ranking-button-prev custom-button-prev btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                    >
+                        <span
+                            class="material-icons-outlined align-bottom text-primary"
+                        >
+                            arrow_back
+                        </span>
+                    </button>
+                    <button
+                        type="button"
+                        class="ranking-button-next custom-button-next btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                    >
+                        <span
+                            class="material-icons-outlined align-bottom text-primary"
+                        >
+                            arrow_forward
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 來自 ZOBAA 的大阪推薦 -->
+        <section class="py-20 py-md-40 overflow-hidden">
+            <div class="container">
+                <!-- 大阪推薦-標題 -->
+                <h2 class="text-primary fs-4 fs-md-2 mb-10 mb-md-20">
+                    來自 ZOBAA 的<br class="d-lg-none" />大阪推薦
+                </h2>
+                <!-- 大阪推薦頁籤-輪播 -->
+                <div class="mb-10 mb-md-20">
+                    <div class="osaka-tag-swiper">
+                        <ul
+                            class="swiper-wrapper nav nav-underline flex-nowrap gap-16"
+                            role="tablist"
+                        >
+                            <li class="swiper-slide w-auto" role="presentation">
+                                <button
+                                    class="nav-link active"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#tab-schedule"
+                                    type="button"
+                                    role="tab"
+                                    aria-selected="true"
+                                >
+                                    觀光行程
+                                </button>
+                            </li>
+                            <li class="swiper-slide w-auto" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#tab-ticket"
+                                    type="button"
+                                    role="tab"
+                                >
+                                    景點門票
+                                </button>
+                            </li>
+                            <li class="swiper-slide w-auto" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#tab-discounts"
+                                    type="button"
+                                    role="tab"
+                                >
+                                    交通優惠
+                                </button>
+                            </li>
+                            <li class="swiper-slide w-auto" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#tab-restaurant"
+                                    type="button"
+                                    role="tab"
+                                >
+                                    美食餐廳
+                                </button>
+                            </li>
+                            <li class="swiper-slide w-auto" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#tab-offer"
+                                    type="button"
+                                    role="tab"
+                                >
+                                    本月優惠
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 大阪推薦-輪播 -->
+                <div class="tab-content">
+                    <div
+                        class="tab-pane fade show active"
+                        id="tab-schedule"
+                        role="tabpanel"
+                    >
+                        <div
+                            class="osaka-swiper-wrapper custom-swiper-wrapper position-relative"
+                        >
+                            <!-- Swiper 主容器 -->
+                            <div class="osaka-swiper custom-swiper">
+                                <div class="swiper-wrapper">
+                                    <!-- 多個 Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="card bg-transparent">
+                                            <div
+                                                class="overflow-hidden rounded-3 mb-8 position-relative"
+                                            >
+                                                <span
+                                                    class="material-icons-outlined toggle-label text-white"
+                                                >
+                                                    favorite_border
+                                                </span>
+                                                <img
+                                                    src="/assets/images/location/top-1.png"
+                                                    class="card-img-top"
+                                                    alt="top-1"
+                                                />
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <div>
+                                                    <h4
+                                                        class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                                    >
+                                                        環球影城超值一日遊｜哈利波特園區＋快速通關體驗
+                                                    </h4>
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >即買即用</span
+                                                        >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >5
+                                                            天前可免費取消</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="d-flex pb-8 border-bottom mb-8"
+                                                    >
+                                                        <div
+                                                            class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                        >
+                                                            <span
+                                                                class="material-icons-outlined text-warning fs-10"
+                                                            >
+                                                                star
+                                                            </span>
+                                                            <span class="fs-9"
+                                                                >4.8</span
+                                                            >
+                                                            <span
+                                                                class="text-natural-60 fs-9"
+                                                                >(1029)</span
+                                                            >
+                                                        </div>
+                                                        <div class="fs-9">
+                                                            1000+ 個已訂購
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5
+                                                            class="text-primary fs-7"
+                                                        >
+                                                            NT$ 5,480
+                                                        </h5>
+                                                        <p
+                                                            class="text-natural-70 fs-9 text-decoration-line-through"
+                                                        >
+                                                            NT$ 6,200
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card bg-transparent">
+                                            <div
+                                                class="overflow-hidden rounded-3 mb-8 position-relative"
+                                            >
+                                                <span
+                                                    class="material-icons-outlined toggle-label text-white"
+                                                >
+                                                    favorite_border
+                                                </span>
+                                                <img
+                                                    src="/assets/images/location/top-2.png"
+                                                    class="card-img-top"
+                                                    alt="top-2"
+                                                />
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <div>
+                                                    <h4
+                                                        class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                                    >
+                                                        奈良梅花鹿餵食體驗＋和服散策｜日式風情輕旅行
+                                                    </h4>
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >中文導覽</span
+                                                        >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >5
+                                                            天前可免費取消</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="d-flex pb-8 border-bottom mb-8"
+                                                    >
+                                                        <div
+                                                            class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                        >
+                                                            <span
+                                                                class="material-icons-outlined text-warning fs-10"
+                                                            >
+                                                                star
+                                                            </span>
+                                                            <span class="fs-9"
+                                                                >4.7</span
+                                                            >
+                                                            <span
+                                                                class="text-natural-60 fs-9"
+                                                                >(880)</span
+                                                            >
+                                                        </div>
+                                                        <div class="fs-9">
+                                                            900+ 個已訂購
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5
+                                                            class="text-primary fs-7"
+                                                        >
+                                                            NT$ 2,250
+                                                        </h5>
+                                                        <p
+                                                            class="text-natural-70 fs-9 text-decoration-line-through"
+                                                        >
+                                                            NT$ 2,800
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card bg-transparent">
+                                            <div
+                                                class="overflow-hidden rounded-3 mb-8 position-relative"
+                                            >
+                                                <span
+                                                    class="material-icons-outlined toggle-label text-white"
+                                                >
+                                                    favorite_border
+                                                </span>
+                                                <img
+                                                    src="/assets/images/location/top-3.png"
+                                                    class="card-img-top"
+                                                    alt="top-3"
+                                                />
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <div>
+                                                    <h4
+                                                        class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                                    >
+                                                        黑門市場美食巡禮｜在地職人帶路吃遍大阪經典小吃
+                                                    </h4>
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >專業導覽</span
+                                                        >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >5
+                                                            天前可免費取消</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="d-flex pb-8 border-bottom mb-8"
+                                                    >
+                                                        <div
+                                                            class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                        >
+                                                            <span
+                                                                class="material-icons-outlined text-warning fs-10"
+                                                            >
+                                                                star
+                                                            </span>
+                                                            <span class="fs-9"
+                                                                >4.6</span
+                                                            >
+                                                            <span
+                                                                class="text-natural-60 fs-9"
+                                                                >(540)</span
+                                                            >
+                                                        </div>
+                                                        <div class="fs-9">
+                                                            700+ 個已訂購
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5
+                                                            class="text-primary fs-7"
+                                                        >
+                                                            NT$ 1,580
+                                                        </h5>
+                                                        <p
+                                                            class="text-natural-70 fs-9 text-decoration-line-through"
+                                                        >
+                                                            NT$ 2,500
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card bg-transparent">
+                                            <div
+                                                class="overflow-hidden rounded-3 mb-8 position-relative"
+                                            >
+                                                <span
+                                                    class="material-icons-outlined toggle-label text-white"
+                                                >
+                                                    favorite_border
+                                                </span>
+                                                <img
+                                                    src="/assets/images/location/top-4.png"
+                                                    class="card-img-top"
+                                                    alt="top-4"
+                                                />
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <div>
+                                                    <h4
+                                                        class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                                    >
+                                                        大阪夜景直升機體驗｜空中俯瞰梅田摩天輪＋海遊館
+                                                    </h4>
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >即買即用</span
+                                                        >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >7
+                                                            天前可免費取消</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="d-flex pb-8 border-bottom mb-8"
+                                                    >
+                                                        <div
+                                                            class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                        >
+                                                            <span
+                                                                class="material-icons-outlined text-warning fs-10"
+                                                            >
+                                                                star
+                                                            </span>
+                                                            <span class="fs-9"
+                                                                >4.7</span
+                                                            >
+                                                            <span
+                                                                class="text-natural-60 fs-9"
+                                                                >(319)</span
+                                                            >
+                                                        </div>
+                                                        <div class="fs-9">
+                                                            600+ 個已訂購
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5
+                                                            class="text-primary fs-7"
+                                                        >
+                                                            NT$6,890
+                                                        </h5>
+                                                        <p
+                                                            class="text-natural-70 fs-9 text-decoration-line-through"
+                                                        >
+                                                            NT$ 8,890
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card bg-transparent">
+                                            <div
+                                                class="overflow-hidden rounded-3 mb-8 position-relative"
+                                            >
+                                                <span
+                                                    class="material-icons-outlined toggle-label text-white"
+                                                >
+                                                    favorite_border
+                                                </span>
+                                                <img
+                                                    src="/assets/images/location/top-1.png"
+                                                    class="card-img-top"
+                                                    alt="top-1"
+                                                />
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <div>
+                                                    <h4
+                                                        class="custom-title lh-base fs-8 mb-4 text-ellipsis-2"
+                                                    >
+                                                        環球影城超值一日遊｜哈利波特園區＋快速通關體驗
+                                                    </h4>
+                                                    <div
+                                                        class="d-flex gap-4 mb-4"
+                                                    >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >即買即用</span
+                                                        >
+                                                        <span
+                                                            class="badge fw-normal fs-9 bg-tint py-2 px-4"
+                                                            >5
+                                                            天前可免費取消</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="d-flex pb-8 border-bottom mb-8"
+                                                    >
+                                                        <div
+                                                            class="d-flex align-items-center gap-2 pe-6 border-end me-6"
+                                                        >
+                                                            <span
+                                                                class="material-icons-outlined text-warning fs-10"
+                                                            >
+                                                                star
+                                                            </span>
+                                                            <span class="fs-9"
+                                                                >4.8</span
+                                                            >
+                                                            <span
+                                                                class="text-natural-60 fs-9"
+                                                                >(1029)</span
+                                                            >
+                                                        </div>
+                                                        <div class="fs-9">
+                                                            1000+ 個已訂購
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h5
+                                                            class="text-primary fs-7"
+                                                        >
+                                                            NT$ 5,480
+                                                        </h5>
+                                                        <p
+                                                            class="text-natural-70 fs-9 text-decoration-line-through"
+                                                        >
+                                                            NT$ 6,200
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                type="button"
+                                class="osaka-button-prev custom-button-prev btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                            >
+                                <span
+                                    class="material-icons-outlined align-bottom text-primary"
+                                >
+                                    arrow_back
+                                </span>
+                            </button>
+                            <button
+                                type="button"
+                                class="osaka-button-next custom-button-next btn bg-natural-0 p-8 border-0 custom-swiper-btn d-none d-xxl-block"
+                            >
+                                <span
+                                    class="material-icons-outlined align-bottom text-primary"
+                                >
+                                    arrow_forward
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-ticket" role="tabpanel">
+                        敬請期待~
+                    </div>
+                    <div
+                        class="tab-pane fade"
+                        id="tab-discounts"
+                        role="tabpanel"
+                    >
+                        敬請期待~
+                    </div>
+                    <div
+                        class="tab-pane fade"
+                        id="tab-restaurant"
+                        role="tabpanel"
+                    >
+                        敬請期待~
+                    </div>
+                    <div class="tab-pane fade" id="tab-offer" role="tabpanel">
+                        敬請期待~
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 旅人攻略 -->
+        <section class="bg-tint py-20 py-md-60">
+            <div class="container">
+                <!-- 旅人攻略-標題 -->
+                <div
+                    class="d-flex flex-column flex-xl-row justify-content-xl-between align-items-xl-center gap-4 mb-10 mb-md-40"
+                >
+                    <h2 class="text-primary fs-4 fs-md-2">
+                        旅人攻略<br />
+                        看看大家怎麼玩！
+                    </h2>
+                    <div class="text-primary fw-bold fs-8 fs-md-7">
+                        <p class="mb-4">
+                            這裡不只是遊記，更是來自旅人親身經歷的風格指南與靈感筆記。
+                        </p>
+                        <p>跟著他們的腳步走，找到屬於你的旅行意義。</p>
+                    </div>
+                </div>
+                <!-- 旅人攻略-卡片 -->
+                <div>
+                    <!-- 卡片一 -->
+                    <div
+                        class="bg-white p-8 p-md-16 rounded-5 mb-12 d-flex flex-column flex-lg-row gap-8 gap-lg-16 guide-card position-relative"
+                    >
+                        <div class="rounded-2 overflow-hidden guide-img">
+                            <img
+                                src="/assets/images/location/guide-1.png"
+                                alt="guide-1"
+                                class="w-100 h-100 object-fit-cover"
+                            />
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-wrap gap-4 mb-12">
+                                <span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#大阪</span
+                                ><span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#老街巡禮</span
+                                >
+                            </div>
+                            <h3 class="fs-5 fs-md-3 mb-4 guide-title">
+                                空堀商店街的散步節奏
+                            </h3>
+                            <p class="fs-9 fs-md-8 mb-20 guide-text">
+                                離開熱鬧難波，走進空堀這座時間凍結的老街，每家店都像一段回憶：木造喫茶、手工小物、安靜的巷弄轉角。這裡沒有觀光氣氛，只有城市最真實的日常樣貌...
+                            </p>
+                            <a
+                                href="#"
+                                class="link-primary fw-bold mt-auto align-self-lg-end stretched-link"
+                                >查看文章<span
+                                    class="material-icons-outlined align-bottom ms-4"
+                                >
+                                    arrow_forward
+                                </span></a
+                            >
+                        </div>
+                    </div>
+                    <!-- 卡片二 -->
+                    <div
+                        class="bg-white p-8 p-md-16 rounded-5 mb-12 d-flex flex-column flex-lg-row gap-8 gap-lg-16 guide-card position-relative"
+                    >
+                        <div class="rounded-2 overflow-hidden guide-img">
+                            <img
+                                src="/assets/images/location/guide-2.png"
+                                alt="guide-2"
+                                class="w-100 h-100 object-fit-cover"
+                            />
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-wrap gap-4 mb-12">
+                                <span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#大阪</span
+                                ><span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#庶民美食</span
+                                >
+                            </div>
+                            <h3 class="fs-5 fs-md-3 mb-4 guide-title">
+                                深夜的章魚燒與便利商店啤酒
+                            </h3>
+                            <p class="fs-9 fs-md-8 mb-20 guide-text">
+                                難波站邊的小巷，有開到凌晨的章魚燒老店。坐在路邊配一罐便利商店啤酒，看路人談天、喝醉、笑鬧，這種庶民感才是我最懷念的大阪味道。
+                            </p>
+                            <a
+                                href="#"
+                                class="link-primary fw-bold mt-auto align-self-lg-end stretched-link"
+                                >查看文章<span
+                                    class="material-icons-outlined align-bottom ms-4"
+                                >
+                                    arrow_forward
+                                </span></a
+                            >
+                        </div>
+                    </div>
+                    <!-- 卡片三 -->
+                    <div
+                        class="bg-white p-8 p-md-16 rounded-5 mb-12 d-flex flex-column flex-lg-row gap-8 gap-lg-16 guide-card position-relative"
+                    >
+                        <div class="rounded-2 overflow-hidden guide-img">
+                            <img
+                                src="/assets/images/location/guide-3.png"
+                                alt="guide-3"
+                                class="w-100 h-100 object-fit-cover"
+                            />
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-wrap gap-4 mb-12">
+                                <span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#大阪</span
+                                ><span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#靜態旅行</span
+                                >
+                            </div>
+                            <h3 class="fs-5 fs-md-3 mb-4 guide-title">
+                                一個人在中之島圖書館待一整天
+                            </h3>
+                            <p class="fs-9 fs-md-8 mb-20 guide-text">
+                                陰天的中之島很安靜，我選擇在百年圖書館裡消磨一整天。閱讀、打盹、寫明信片，從高聳書架與拱形窗邊找到片刻的呼吸空間。不趕行程的日子，才最像我想要的旅途。
+                            </p>
+                            <a
+                                href="#"
+                                class="link-primary fw-bold mt-auto align-self-lg-end stretched-link"
+                                >查看文章<span
+                                    class="material-icons-outlined align-bottom ms-4"
+                                >
+                                    arrow_forward
+                                </span></a
+                            >
+                        </div>
+                    </div>
+                    <!-- 卡片四 -->
+                    <div
+                        class="bg-white p-8 p-md-16 rounded-5 d-flex flex-column flex-lg-row gap-8 gap-lg-16 guide-card position-relative"
+                    >
+                        <div class="rounded-2 overflow-hidden guide-img">
+                            <img
+                                src="/assets/images/location/guide-4.png"
+                                alt="guide-4"
+                                class="w-100 h-100 object-fit-cover"
+                            />
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-wrap gap-4 mb-12">
+                                <span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#大阪</span
+                                ><span class="badge bg-tint fs-md-8 py-4 px-8"
+                                    >#在地文化</span
+                                >
+                            </div>
+                            <h3 class="fs-5 fs-md-3 mb-4 guide-title">
+                                跟著在地人玩「新世界」
+                            </h3>
+                            <p class="fs-9 fs-md-8 mb-20 guide-text">
+                                走進「新世界」，才發現大阪有多狂、有多生活。串炸店裡全是吆喝聲、立吞店排滿上班族，還有拍不完的霓虹與搞笑招牌。這一區又亂又熱鬧，但真實又迷人。
+                            </p>
+                            <a
+                                href="#"
+                                class="link-primary fw-bold mt-auto align-self-lg-end stretched-link"
+                                >查看文章<span
+                                    class="material-icons-outlined align-bottom ms-4"
+                                >
+                                    arrow_forward
+                                </span></a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 頁尾 -->
+        <%- include('./layout/footer'); -%>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.js"></script>
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>

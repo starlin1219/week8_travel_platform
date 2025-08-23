@@ -1,0 +1,236 @@
+<!-- fixed-top -->
+<nav class="navbar py-6 py-md-8 fixed-top">
+    <div class="container position-relative">
+        <div class="d-flex align-items-center me-auto">
+            <!-- logo -->
+            <a class="navbar-brand me-12" href="index.html">
+                <img src="/assets/images/logo.svg" alt="logo" />
+            </a>
+            <!-- 搜尋-pc -->
+            <form action="/" class="position-relative d-none d-lg-block">
+                <span
+                    class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y text-natural-60 ps-6"
+                >
+                    search
+                </span>
+                <input
+                    type="search"
+                    class="form-control py-5 ps-20 pe-6 rounded-1 search-pc"
+                    name="search"
+                    id="seardh-pc"
+                    placeholder="搜尋景點、地點或城市"
+                />
+            </form>
+        </div>
+        <!-- 搜尋-mobile -->
+        <div class="position-absolute start-0 end-0 z-1 px-6 bg-white">
+            <div class="collapse" id="collapseSearch">
+                <div class="d-flex align-items-center">
+                    <form action="/" class="position-relative w-100">
+                        <span
+                            class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y text-natural-60 ps-6"
+                        >
+                            search
+                        </span>
+                        <input
+                            type="search"
+                            class="form-control py-4 ps-20 pe-6 rounded-1"
+                            name="search"
+                            id="seardh"
+                            placeholder="搜尋景點、地點或城市"
+                        />
+                    </form>
+                    <button
+                        type="button"
+                        class="btn p-4 border-0"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSearch"
+                    >
+                        <span class="material-icons-outlined align-bottom">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button
+            type="button"
+            class="btn p-4 border-0 d-lg-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSearch"
+        >
+            <span class="material-icons-outlined align-bottom"> search </span>
+        </button>
+        <!-- 購物車連結 -->
+        <a href="cart.html" class="btn py-4 px-6 border-0 me-lg-8">
+            <span class="position-relative">
+                <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-alert text-white p-0 cart-tag"
+                >
+                    2
+                </span>
+                <span class="material-icons-outlined align-bottom">
+                    shopping_cart
+                </span>
+            </span>
+        </a>
+        <div>
+            <!-- 漢堡選單 -->
+            <div class="d-lg-none">
+                <button
+                    class="btn p-4 border-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="material-icons-outlined align-bottom">
+                        menu
+                    </span>
+                </button>
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                >
+                    <div class="offcanvas-header pt-12 px-12 ms-auto">
+                        <button
+                            type="button"
+                            class="btn p-0 border-0"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        >
+                            <span class="material-icons-outlined align-bottom">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <div
+                        class="offcanvas-body d-flex flex-column pt-0 px-12 pb-12"
+                    >
+                        <!-- offcanvas 使用者狀態 -->
+                        <div class="pb-8 border-bottom">
+                            <!-- 未登入 -->
+                            <div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <div
+                                        class="user-img bg-primary-40 rounded-circle p-2"
+                                    >
+                                        <img
+                                            src="/assets/images/ic_profile.svg"
+                                            alt="ic_profile"
+                                            class="align-bottom"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold text-primary">訪客</p>
+                                        <p>未登入</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 已登入 -->
+                            <!-- <div class="d-flex align-items-center gap-4">
+                                <div class="user-img">
+                                    <img
+                                        src="/assets/images/user/avatar-1.png"
+                                        alt="avatar-1"
+                                        class="align-bottom"
+                                    />
+                                </div>
+                                <div>
+                                    <p class="fw-bold text-primary">Jessica</p>
+                                    <p>jessica.yen@gamil.com</p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- offcanvas 內容 -->
+                        <!-- 未登入 -->
+                        <div class="d-flex flex-column flex-grow-1">
+                            <div class="pt-12">
+                                <h2 class="fs-7 text-primary mb-2">
+                                    歡迎來到 ZOBAA
+                                </h2>
+                                <p>
+                                    加入會員即可立即訂購、收藏行程，並享相關優惠好禮。
+                                </p>
+                            </div>
+                            <div class="mt-auto">
+                                <a
+                                    href="login.html"
+                                    class="btn btn-primary w-100"
+                                    >登入 / 註冊</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 已登入 -->
+                        <!-- <div class="d-flex flex-column flex-grow-1 pt-8">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><img
+                                            src="/assets/images/ic_order.svg"
+                                            alt="ic_order"
+                                            class="align-bottom me-4"
+                                        />訂單管理</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><span
+                                            class="material-icons-outlined align-bottom me-4"
+                                        >
+                                            favorite_border </span
+                                        >我的收藏</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link py-6 px-0 text-natural-80"
+                                        href="#"
+                                        ><img
+                                            src="/assets/images/ic_setting.svg"
+                                            alt="ic_setting"
+                                            class="align-bottom me-4"
+                                        />帳號設定</a
+                                    >
+                                </li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a
+                                    href="#"
+                                    class="btn py-6 px-0 border-0 w-100 text-start fw-normal"
+                                    ><img
+                                        src="/assets/images/ic_logout.svg"
+                                        alt="ic_logout"
+                                        class="me-4 align-bottom"
+                                    />登出</a
+                                >
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- navbar 使用者狀態 -->
+            <div class="d-none d-lg-block">
+                <!-- 未登入 -->
+                <a href="login.html" class="btn btn-primary">登入 / 註冊</a>
+                <!-- 已登入 -->
+                <!-- <div class="d-flex align-items-center gap-4">
+                    <a href="user.html" class="user-img">
+                        <img
+                            src="/assets/images/user/avatar-1.png"
+                            alt="user-img"
+                        />
+                    </a>
+                    <span class="text-primary fw-bold">Jessica</span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>

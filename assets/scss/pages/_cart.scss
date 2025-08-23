@@ -1,0 +1,59 @@
+// 購物車內容
+.cart-img {
+    width: 132px;
+    height: 132px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.cart-num {
+    width: 40px;
+}
+
+.cost-card {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+}
+
+// 其他人也買了
+.also-bought-button-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -28px;
+}
+.also-bought-button-next {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -28px;
+}
+
+// 底部列-展開明細+前往結帳
+.bill {
+    position: sticky;
+    bottom: 0;
+    z-index: 1054;
+}
+.bill-modal {
+    .modal-dialog {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+
+        width: 100%;
+        max-width: 100%;
+    }
+    .modal-content {
+        border-radius: 12px 12px 0 0;
+    }
+}
+
+.modal.fade .modal-dialog {
+    transform: translate(0, 100%);
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}

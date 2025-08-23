@@ -1,0 +1,66 @@
+.custom-swiper-wrapper {
+    .custom-swiper {
+        overflow: visible;
+
+        @include media-breakpoint-up(xxl) {
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            width: 306px;
+        }
+
+        .custom-title {
+            min-height: 48px;
+            color: $black;
+        }
+
+        img {
+            transition: transform 0.3s;
+        }
+    }
+}
+
+.custom-swiper .swiper-slide:hover {
+    cursor: pointer;
+    .custom-title {
+        color: $primary;
+        transition: color 0.3s;
+    }
+    img {
+        transform: scale(1.1);
+    }
+}
+
+.custom-swiper-btn {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.custom-button-prev {
+    position: absolute;
+    top: 40%;
+    left: -40px;
+    @media (min-width: 1500px) {
+        left: -80px;
+    }
+}
+.custom-button-next {
+    position: absolute;
+    top: 40%;
+    right: -40px;
+    @media (min-width: 1500px) {
+        right: -80px;
+    }
+}
+
+.toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    z-index: 2;
+}

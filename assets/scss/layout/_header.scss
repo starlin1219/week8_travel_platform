@@ -1,0 +1,38 @@
+html {
+    // 設定頁面可滾動，並為滾動條定義時間軸
+    scroll-timeline-name: --page-scroll;
+    scroll-timeline-axis: y;
+}
+
+.navbar {
+    animation: navbar-bg-change forwards;
+    animation-timeline: --page-scroll;
+    animation-range: 0 80px;
+
+    @keyframes navbar-bg-change {
+        from {
+            background-color: transparent;
+        }
+        to {
+            background-color: rgba($white, 0.72);
+            border-bottom: 0.5px solid $natural-40;
+            backdrop-filter: blur(4px);
+        }
+    }
+}
+
+.cart-tag {
+    width: 16px;
+    height: 16px;
+    line-height: 1.333;
+    font-size: 12px;
+}
+
+.search-pc {
+    width: 400px;
+}
+
+.user-img {
+    width: 32px;
+    height: 32px;
+}

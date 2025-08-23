@@ -1,0 +1,30 @@
+.nav-underline {
+    .nav-link.active,
+    .show > .nav-link {
+        color: $primary;
+        border-bottom: none;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 32px;
+            height: 4px;
+            border-radius: 10px;
+            background-color: $primary;
+        }
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 16px 0;
+        color: $natural-80;
+        border: none;
+    }
+}

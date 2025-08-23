@@ -1,0 +1,37 @@
+.btn-primary {
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $dark;
+        border-color: $dark;
+    }
+    &.disabled,
+    &:disabled {
+        background-color: $natural-40;
+        border-color: $natural-40;
+        color: $natural-60;
+    }
+}
+
+.btn-outline-primary {
+    background: $white;
+}
+
+.btn-natural-0 {
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $black;
+        border-color: $black;
+        color: $white;
+    }
+}
+
+.btn-natural-100 {
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+    }
+}

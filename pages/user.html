@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/assets/images/favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <title>個人資訊 | ZOBAA! 旅遊網站</title>
+    </head>
+    <body>
+        <!-- 導覽列 -->
+        <%- include('./layout/header_login'); -%>
+
+        <main
+            class="bg-user bg-natural-15 pt-52 pt-md-96 pt-lg-99 pb-20 pb-md-60"
+        >
+            <!-- hero 區塊 -->
+            <header class="mb-64 mb-md-84 mb-lg-96">
+                <div class="container position-relative">
+                    <!-- hero 圖片 -->
+                    <div class="rounded-4 overflow-hidden hero-img">
+                        <img src="/assets/images/user/hero.png" alt="hero" />
+                    </div>
+                    <!-- 更新封面 -->
+                    <div class="cover-update d-none d-md-block">
+                        <label
+                            for="coverFile"
+                            class="form-label mb-0 text-white cursor-pointer"
+                            ><span class="material-icons align-bottom me-4">
+                                edit </span
+                            >更換封面</label
+                        >
+                        <input
+                            class="form-control d-none"
+                            type="file"
+                            id="coverFile"
+                        />
+                    </div>
+                    <!-- user頭像及資訊 -->
+                    <div class="avatar-info">
+                        <!-- user頭像 -->
+                        <div
+                            class="hero-user-img border border-primary border-2 rounded-circle mb-4 position-relative mx-auto"
+                        >
+                            <img
+                                src="/assets/images/user/avatar-1.png"
+                                alt="avatar-1"
+                            />
+                            <div
+                                class="bg-avatar bg-primary p-4 rounded-circle"
+                            >
+                                <label
+                                    for="avatarFile"
+                                    class="form-label text-white d-flex align-items-center justify-content-center cursor-pointer"
+                                    ><span class="material-icons align-bottom">
+                                        edit
+                                    </span></label
+                                >
+                                <input
+                                    class="form-control d-none"
+                                    type="file"
+                                    id="avatarFile"
+                                />
+                            </div>
+                        </div>
+                        <!-- user資訊 -->
+                        <div class="text-center">
+                            <h1 class="text-primary fs-7 fs-lg-6">
+                                Jessica Yen
+                            </h1>
+                            <p class="fs-9 fs-lg-8">jessica.yen@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 主要內容 -->
+            <section>
+                <div class="container">
+                    <!-- 個人資訊-頁籤 -->
+                    <div
+                        class="bg-white py-8 px-12 rounded-2 rounded-md-4 user-shadow mb-8 mb-md-12"
+                    >
+                        <ul class="nav user-tab gap-12 w-100">
+                            <li class="nav-item flex-grow-1">
+                                <button
+                                    type="button"
+                                    class="nav-link text-black fw-bold py-6 px-0 active"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-account"
+                                >
+                                    <span class="pb-6">我的帳號</span>
+                                </button>
+                            </li>
+                            <li class="nav-item flex-grow-1 ps-12 border-start">
+                                <button
+                                    type="button"
+                                    class="nav-link text-black fw-bold py-6 px-0"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-order"
+                                >
+                                    <span class="pb-6">訂單管理</span>
+                                </button>
+                            </li>
+                            <li class="nav-item flex-grow-1 ps-12 border-start">
+                                <button
+                                    type="button"
+                                    class="nav-link text-black fw-bold py-6 px-0"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#nav-collect"
+                                >
+                                    <span class="pb-6">我的收藏</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 個人資訊內容-頁籤 -->
+                    <div
+                        class="bg-white pt-16 pt-md-32 pb-8 pb-md-16 px-8 px-md-16 rounded-2 rounded-md-4 user-shadow"
+                    >
+                        <div class="tab-content" id="user-tabContent">
+                            <!-- 我的帳號 -->
+                            <div
+                                class="tab-pane fade show active"
+                                id="nav-account"
+                                role="tabpanel"
+                                aria-labelledby="nav-account-tab"
+                                tabindex="0"
+                            >
+                                <h2 class="text-black fs-4 fs-md-2 mb-20">
+                                    我的帳號
+                                </h2>
+                                <!-- 我的帳號-頁籤 -->
+                                <ul
+                                    class="nav nav-underline border-bottom mb-12 gap-16"
+                                    id="myAccount"
+                                    role="tablist"
+                                >
+                                    <li class="nav-item" role="presentation">
+                                        <button
+                                            class="nav-link active"
+                                            id="personal-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#personal-tab-pane"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="personal-tab-pane"
+                                            aria-selected="true"
+                                        >
+                                            個人資訊
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button
+                                            class="nav-link"
+                                            id="travelers-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#travelers-tab-pane"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="travelers-tab-pane"
+                                            aria-selected="false"
+                                        >
+                                            常用旅客
+                                        </button>
+                                    </li>
+                                </ul>
+                                <!-- 我的帳號-頁籤內容 -->
+                                <div class="tab-content" id="myAccountContent">
+                                    <div
+                                        class="tab-pane fade show active"
+                                        id="personal-tab-pane"
+                                        role="tabpanel"
+                                        aria-labelledby="personal-tab"
+                                        tabindex="0"
+                                    >
+                                        <!-- 個人資訊 -->
+                                        <div class="mb-20">
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    姓名
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    Jessica Yen
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    電子信箱
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    jessica.yen@gmail.com
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    密碼
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    ************
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    聯絡電話
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    +886 912-345-678
+                                                </p>
+                                            </div>
+                                            <div class="mb-12">
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    地址
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    台北市士林區幸福路193號5樓之1
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-9 fs-md-8 mb-4">
+                                                    生日
+                                                </p>
+                                                <p
+                                                    class="text-black fw-bold lh-md-sm fs-8 fs-md-7"
+                                                >
+                                                    1995-09-20
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-primary w-100 w-md-auto"
+                                            >
+                                                <span
+                                                    class="material-icons align-bottom me-2"
+                                                >
+                                                    edit </span
+                                                >編輯資訊
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="travelers-tab-pane"
+                                        role="tabpanel"
+                                        aria-labelledby="travelers-tab"
+                                        tabindex="0"
+                                    >
+                                        <!-- 常用旅客 -->
+                                        <div class="mb-20">
+                                            <!-- 常用旅客卡片1 -->
+                                            <div
+                                                class="p-8 p-md-12 border rounded-3 mb-6 d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center traveler-card"
+                                            >
+                                                <!-- 常用旅客資訊 -->
+                                                <div
+                                                    class="d-flex align-items-center gap-4"
+                                                >
+                                                    <div
+                                                        class="traveler-img overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="/assets/images/user/avatar-1.png"
+                                                            alt="avatar-1"
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <h3
+                                                            class="text-dark-success fs-7 mb-4"
+                                                        >
+                                                            Jessica Yen
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <!-- 編輯刪除按鈕 -->
+                                                <div class="d-flex gap-4">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons align-bottom me-2"
+                                                        >
+                                                            edit </span
+                                                        >編輯資訊
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined align-bottom me-2"
+                                                        >
+                                                            close </span
+                                                        >刪除
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- 常用旅客卡片2 -->
+                                            <div
+                                                class="p-8 p-md-12 border rounded-3 d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center traveler-card"
+                                            >
+                                                <!-- 常用旅客資訊 -->
+                                                <div
+                                                    class="d-flex align-items-center gap-4"
+                                                >
+                                                    <div
+                                                        class="traveler-img overflow-hidden"
+                                                    >
+                                                        <img
+                                                            src="/assets/images/user/avatar-2.jpg"
+                                                            alt="avatar-2"
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <h3
+                                                            class="text-dark-success fs-7 mb-4"
+                                                        >
+                                                            Jenny Lin
+                                                        </h3>
+                                                        <div
+                                                            class="text-primary d-flex gap-4 mb-2 d-none d-md-block"
+                                                        >
+                                                            <img
+                                                                src="/assets/images/user/akar-icons_cake.svg"
+                                                                alt="ic_cake"
+                                                            /><span
+                                                                >Jenny.Linnn@gmail.com</span
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="text-primary d-flex gap-4 d-none d-md-block"
+                                                        >
+                                                            <img
+                                                                src="/assets/images/user/line-md_email.svg"
+                                                                alt="ic_email"
+                                                            /><time
+                                                                datetime="2001-01-30"
+                                                                >2001.01.30</time
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 編輯刪除按鈕 -->
+                                                <div class="d-flex gap-4">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons align-bottom me-2"
+                                                        >
+                                                            edit </span
+                                                        >編輯資訊
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-outline-primary"
+                                                    >
+                                                        <span
+                                                            class="material-icons-outlined align-bottom me-2"
+                                                        >
+                                                            close </span
+                                                        >刪除
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-primary w-100 w-md-auto"
+                                            >
+                                                <span
+                                                    class="material-icons-outlined align-bottom me-2"
+                                                >
+                                                    add </span
+                                                >新增常用旅客
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 訂單管理 -->
+                            <div
+                                class="tab-pane fade"
+                                id="nav-order"
+                                role="tabpanel"
+                                aria-labelledby="nav-order-tab"
+                                tabindex="0"
+                            >
+                                <h2 class="text-black fs-4 fs-md-2 mb-20">
+                                    訂單管理
+                                </h2>
+                                <p>目前沒有任何資料</p>
+                            </div>
+                            <!-- 我的收藏 -->
+                            <div
+                                class="tab-pane fade"
+                                id="nav-collect"
+                                role="tabpanel"
+                                aria-labelledby="nav-collect-tab"
+                                tabindex="0"
+                            >
+                                <h2 class="text-black fs-4 fs-md-2 mb-20">
+                                    我的收藏
+                                </h2>
+                                <p>目前沒有任何資料</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 頁尾 -->
+        <%- include('./layout/footer'); -%>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.js"></script>
+        <script type="module" src="../main.js"></script>
+    </body>
+</html>
