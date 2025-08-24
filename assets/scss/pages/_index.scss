@@ -146,7 +146,7 @@
 
 // 對角線背景
 .diagonal {
-    /* 手機預設值 */
+    // 手機預設值
     --diag-h: 40px;
     --diag-deg: -3.979deg;
 
@@ -164,7 +164,6 @@
         background: $white;
         transform-origin: left top;
         transform: skewY(var(--diag-deg)); // 跟著變數動
-        will-change: transform; // 微優化繪製
     }
 
     // 斷點只改「變數」，其餘樣式不用重覆
@@ -364,7 +363,6 @@
     @include media-breakpoint-up(lg) {
         background: url(/assets/images/index/bg-line.svg) no-repeat center 65% /
                 2000px auto,
-            // url(/assets/images/index/bg-up.svg) no-repeat left top / 800px,
             url(/assets/images/index/bg-up.svg) no-repeat calc(0% - 240px)
                 calc(0% - 360px) / 800px,
             url(/assets/images/index/bg-down.svg) no-repeat calc(100% - 40px)

@@ -21,6 +21,10 @@ html {
     }
 }
 
+.navbar:has(#collapseSearch.show) {
+    background-color: $white;
+}
+
 .cart-tag {
     width: 16px;
     height: 16px;

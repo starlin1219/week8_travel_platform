@@ -170,6 +170,7 @@
 .air-datepicker-cell {
     width: 44px;
     height: 44px;
+    border-radius: 8px;
 }
 .air-datepicker-body--day-name {
     color: $natural-80;
@@ -181,9 +182,6 @@
 }
 .air-datepicker-body--cells.-days- {
     row-gap: 16px;
-}
-.air-datepicker-cell {
-    border-radius: 8px;
 }
 .air-datepicker-cell.-day-:not(.-disabled-) {
     font-weight: bold;
